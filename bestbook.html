@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양시 전자책 도서관</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/commonMain.css">
+    <link rel="stylesheet" href="css/ebookCommon.css">
+    <link rel="stylesheet" href="css/bestbook.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+
+
+</head>
+<body>
+    <!--건너띄기 링크 -->
+    <a id="skipNav" href="#skipNavStart">본문가로가기</a>
+
+    <!-- wrapper(전체 콘텐츠 영역 시작)-->
+    <div id="wrapper">
+        
+        <!--header영역 시작-->
+        <header id="header">
+            <!-- 탑 메뉴 영역시작-->
+            <div class="topMenuArea">
+                <ul class="topMenu">
+                    <li><a href="#" title="로그인">로그인</a></li>
+                    <li><a href="memberAgreement.html" title="회원가입">회원가입</a></li>
+                    <li><a href="#" title="사이트맵">사이트맵</a></li>
+                </ul>
+            </div>
+            <!-- 탑 메뉴 영역 종료-->
+
+            <!-- 로고/서치/메인메뉴 영역 시작 -->
+                <div class="menuWrap">
+
+                    <!-- 로고 / 서치 영역  -->
+                    <div class="logoAndSearch">
+
+                        <!--로고 영역 -->
+                        <div class="logoArea">
+                            <h1 class="logo">
+                                <a href="index.html" title="메인화면으로이동">
+                                    <img src="images/logo.png" alt="logo">
+                                </a>
+                            </h1>
+                        </div>
+
+                        <!--검색 영역-->
+                        <div class="selectAndSearch">
+
+                                <!-- 검색 유형 선택 영역 -->
+                                <div class="selectArea">
+                                    <select name="cate" id="cate" title="검색유형선택">
+                                        <option value="allCate">전체</option>
+                                        <option value="ebook">전자책</option>
+                                        <option value="autioBook">오디오북</option>
+                                    </select>
+                                </div>
+
+                                <!-- 검색 영역  -->
+                                <div class="searchArea">
+                                    <input type="search" class="search">
+                                </div>
+                                <a href="#" class="btnSearch" title="검색">
+                                    검색
+                                </a>
+                        </div>
+                    </div>
+                    <!-- 로고 서치 영역 종료-->
+    
+                    
+                    <!-- 메인 메뉴 영역 시작-->
+                    <nav>
+                        <h2 class="hidden">메인메뉴</h2>
+                        <ul class="mainMenu">
+                            <!-- 주메뉴 1 -->
+                            <li><a href="#">도서관소식</a>
+                                <div class="subMenuWrap  subNotice subMenuAct">
+                                    <div class="subMenu">
+                                        <a href="#" class="subAtc">공지사항</a>
+                                        <a href="#" class="subAtc">자주하는질문</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 2 -->
+                            <li><a href="ebook.html">전자책</a>
+                                <div class="subMenuWrap subEbook">
+                                    <div class="subMenu">
+                                        <a href="#" class="subAtc">경제경영</a>
+                                        <a href="#" class="subAtc">자기계발</a>
+                                        <a href="#" class="subAtc">시/에세이</a>
+                                        <a href="#" class="subAtc">인문</a>
+                                        <a href="#" class="subAtc">종교</a>
+                                        <a href="#" class="subAtc">소설</a>
+                                        <a href="#" class="subAtc">국어/외국어</a>
+                                        <a href="#" class="subAtc">정치/사회</a>
+                                        <a href="#" class="subAtc">역사/문화</a>
+                                        <a href="#" class="subAtc">과학/공학</a>
+                                        <a href="#" class="subAtc">IT/프로그래밍</a>
+                                        <a href="#" class="subAtc">건강/의학</a>
+                                        <a href="#" class="subAtc">가정/생활/요리</a>
+                                        <a href="#" class="subAtc">여행/취미</a>
+                                        <a href="#" class="subAtc">예술/대중문화</a>
+                                        <a href="#" class="subAtc">유아</a>
+                                        <a href="#" class="subAtc">아동</a>
+                                        <a href="#" class="subAtc">청소년</a>
+                                        <a href="#" class="subAtc">교재/수험서</a>
+                                        <a href="#" class="subAtc">외국도서</a>
+                                        <a href="#" class="subAtc">매거진</a>
+                                        <a href="#" class="subAtc">로맨스</a>
+                                        <a href="#" class="subAtc">로맨스판타지</a>
+                                        <a href="#" class="subAtc">판타지</a>
+                                        <a href="#" class="subAtc">라이트노벨</a>
+                                        <a href="#" class="subAtc">단행본만화</a>
+                                        <a href="#" class="subAtc">미분류</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 3 -->
+                            <li><a href="#">오디오북</a>
+                                <div class="subMenuWrap subAudio">
+                                    <div class="subMenu">
+                                        <a href="#" class="subAtc">자기계발</a>
+                                        <a href="#" class="subAtc">시/에세이</a>
+                                        <a href="#" class="subAtc">역사/문화</a>
+                                        <a href="#" class="subAtc">여행/취미</a>
+                                        <a href="#" class="subAtc">아동</a>
+                                        <a href="#" class="subAtc">청소년</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 4 -->
+                            <li><a href="#">이용안내</a>
+                                <div class="subMenuWrap subInfo">
+                                    <div class="subMenu">
+                                        <a href="#" class="subAtc">전자도서관 안내</a>
+                                        <a href="#" class="subAtc">PC에서 이용하기</a>
+                                        <a href="#" class="subAtc">모바일에서 이용하기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">희망도서신청</a></li>
+                        </ul>
+                    </nav>
+                    <!-- 메인 메뉴 영역 종료 -->
+                </div>
+        </header>
+        <!--header 영역 종료 -->
+
+        <!--mainContent 영역 시작-->
+        <div id="mainContentsWrap">
+            <div class="mainConetns">   
+                <!-- 좌측 메뉴 영역 시작-->
+                <div class="leftMenu">
+                    <div class="leftInner">
+                        <h2>베스트</h2>
+                        <ul>
+                            <li><a href="#"><span>베스트 자료</span></a></li>
+                            <li><a href="#"><span>신착 자료</span></a></li>
+                            <li><a href="#"><span>부록목록</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 좌측 메뉴 영역 종료-->
+
+                <!-- 컨텐츠 영역 시작-->
+                <div class="rightContents">
+
+                    <!--메인컨텐츠 제목-->
+                    <div id="skipNavStart" class="contentTitleArea">
+                        <h3 class="contentTitle">베스트 자료</h3>
+                    </div>
+
+                    <!-- 메인컨텐츠 영역-->
+                    <div id="bookListWrap">
+                        <!-- 필터 라디오 버튼 -->
+                        <div class="filterRadio">
+                            <input type="radio" name="filter" id="selectAll" checked value="all">
+                            <label for="selectAll">전체도서보기</label>
+                            <input type="radio" name="filter" id="selectAble" value="able">
+                            <label for="selectAble">대출가능도서보기</label>
+                        </div>
+
+                        <!--탭 메뉴 -->
+                        <ul>
+                            <!-- 전체 -->
+                            <li id="tab1" class="btnCon">
+                                <input type="radio" checked name="tabmenu" id="tabmenu1" value="allbook">
+                                <!--<label for="tabmenu1"><h4><span>전체</span></h4></label> -->
+                                <label for="tabmenu1"><span>전체</span></label>
+                                
+                            </li>
+                            <!-- 전자책 -->
+                            <li id="tab2" class="btnCon">
+                                <input type="radio" name="tabmenu" id="tabmenu2" value="ebook">
+                                <label for="tabmenu2"><span>전자책</span></label>
+                            </li>
+
+                            <!-- 오디오북 -->
+                            <li id="tab3" class="btnCon">
+                                <input type="radio" name="tabmenu" id="tabmenu3" value="abook">
+                                <label for="tabmenu3"><span>오디오북</span></label>
+                            </li>
+                        </ul>
+                        <!--탭메뉴 종료 -->
+
+                        <!--책 리스트 디스플레이 영역-->
+                        <div class="listOuter">
+                            <p>전체도서에는 총 <strong>100</strong>개의 자료가 있습니다.</p>
+                            <div class="listInner">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 책 리스트 디스플레이 종료 -->
+
+                        <!-- 페이징 영역 시작 -->
+                        <div class="pasing">
+                        </div>
+                        <!-- 페이징 영역 종료 -->
+                    </div>
+                    <!--booklistWrap영역 종료-->
+                </div>
+                <!-- 컨텐츠 영역 종료 -->
+            </div>
+            <!-- top button -->
+            <a href="#header" class="topBtn" title="최상위로">TOP</a>
+        </div>
+        <!--main contents 영역 종료-->
+
+        <!-- footer 영역 시작-->
+        <footer id="footer">
+            <div class="footerInner">
+                <div class="footerLeft">
+                    <a href="index.html" title="고양시 전차책도서관 바로가기" target="_self">
+                        <img src="images/logo_foot.png" alt="footer logo">
+                    </a>
+                    <address>
+                    도서관명 : 고양시 전자책도서관 | 주소 : 고양시 덕양구 은빛로77번길 8(화정동,화정도서관)<br>
+                    대표전화 : 031-8075-9215 | 팩스 : -<br>
+                    Copyright ⓒ 고양시도서관센터. 대표전화 : 031-8075-9215. All rights reserved.<br>
+                    </address>
+                </div>
+
+                <div class="footerRight">
+                    <div class="familySite">
+                        <button class="btnFamily">
+                            <span class="btnText">Family Site</span>
+                            <!--<span class="arrow">g</span>-->
+                            <span class="arrow"><i class="fa-solid fa-chevron-up"></i></span>
+                        </button>
+                        <div class="familyUl">
+                            <ul>
+                                <li><a href="https://www.goyanglib.or.kr/">고양시도서관센터</a></li>
+                                <li><a href="https://www.library.kr/cyber/index.do">경기도사이버도서관</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerSns">
+                        <a class="postLink" href="https://post.naver.com/goyang_library" title="네이버포스트바로가기" target="_blank">
+                            <span class="hidden">네이버포스트</span>
+                        </a>
+                        <a class="instagramLink" href="https://www.instagram.com/goyang_library/" title="인스타그램바로가기" target="_blank">
+                            <span class="hidden">인스타그램</span>
+                        </a>
+                        <a class="facebookLink" href="https://www.facebook.com/goyanglib.or.kr" title="페이스북바로가기" target="_blank">
+                            <span class="hidden"></span>
+                        </a>
+                        <a class="blogLink" href="https://blog.naver.com/goyang_lib" title="네이버블로그배로가바" target="_blank">
+                            <span class="hidden">네이버블로그</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer 영역 종료 -->
+        <!-- footer 영역 종료 -->
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/bestbook.js"></script>
+    <script src="https://kit.fontawesome.com/3d4603cd1d.js" crossorigin="anonymous"></script>
+</body>
+</html>

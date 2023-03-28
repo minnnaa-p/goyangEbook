@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양시 전자책 도서관</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/commonMain.css">
+    <link rel="stylesheet" href="css/ebookCommon.css">
+    <link rel="stylesheet" href="css/ebookContent.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <!--건너띄기 링크 -->
+    <a id="skipNav" href="#skipNavStart">본문가로가기</a>
+
+    <!-- wrapper(전체 콘텐츠 영역 시작)-->
+    <div id="wrapper">
+        <!--header영역 시작-->
+        <header id="header">
+            <!-- 탑 메뉴 영역시작-->
+            <div class="topMenuArea">
+                <ul class="topMenu">
+                    <li><a href="#" title="로그인">로그인</a></li>
+                    <li><a href="memberAgreement.html" title="회원가입">회원가입</a></li>
+                    <li><a href="#" title="사이트맵">사이트맵</a></li>
+                </ul>
+            </div>
+            <!-- 탑 메뉴 영역 종료-->
+
+            <!-- 로고/서치/메인메뉴 영역 시작 -->
+                <div class="menuWrap">
+
+                    <!-- 로고 / 서치 영역  -->
+                    <div class="logoAndSearch">
+
+                        <!--로고 영역 -->
+                        <div class="logoArea">
+                            <h1 class="logo">
+                                <a href="index.html" title="메인화면으로이동">
+                                    <img src="images/logo.png" alt="logo">
+                                </a>
+                            </h1>
+                        </div>
+
+                        <!--검색 영역-->
+                        <div class="selectAndSearch">
+
+                                <!-- 검색 유형 선택 영역 -->
+                                <div class="selectArea">
+                                    <select name="cate" id="cate" title="검색유형선택">
+                                        <option value="allCate">전체</option>
+                                        <option value="ebook">전자책</option>
+                                        <option value="autioBook">오디오북</option>
+                                    </select>
+                                </div>
+
+                                <!-- 검색 영역  -->
+                                <div class="searchArea">
+                                    <input type="search" class="search">
+                                </div>
+                                <a href="#" class="btnSearch" title="검색">
+                                    검색
+                                </a>
+                        </div>
+                    </div>
+                    <!-- 로고 서치 영역 종료-->
+    
+                    
+                    <!-- 메인 메뉴 영역 시작-->
+                    <nav>
+                        <h2 class="hidden">메인메뉴</h2>
+                        <ul class="mainMenu">
+                            <!-- 주메뉴 1 -->
+                            <li><a href="#">도서관소식</a>
+                                <div class="subMenuWrap  subNotice subMenuAct">
+                                    <div class="subMenu">
+                                        <a href="#">공지사항</a>
+                                        <a href="#">자주하는질문</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 2 -->
+                            <li><a href="ebook.html">전자책</a>
+                                <div class="subMenuWrap subEbook">
+                                    <div class="subMenu">
+                                        <a href="#">경제경영</a>
+                                        <a href="#">자기계발</a>
+                                        <a href="#">시/에세이</a>
+                                        <a href="#">인문</a>
+                                        <a href="#">종교</a>
+                                        <a href="#">소설</a>
+                                        <a href="#">국어/외국어</a>
+                                        <a href="#">정치/사회</a>
+                                        <a href="#">역사/문화</a>
+                                        <a href="#">과학/공학</a>
+                                        <a href="#">IT/프로그래밍</a>
+                                        <a href="#">건강/의학</a>
+                                        <a href="#">가정/생활/요리</a>
+                                        <a href="#">여행/취미</a>
+                                        <a href="#">예술/대중문화</a>
+                                        <a href="#">유아</a>
+                                        <a href="#">아동</a>
+                                        <a href="#">청소년</a>
+                                        <a href="#">교재/수험서</a>
+                                        <a href="#">외국도서</a>
+                                        <a href="#">매거진</a>
+                                        <a href="#">로맨스</a>
+                                        <a href="#">로맨스판타지</a>
+                                        <a href="#">판타지</a>
+                                        <a href="#">라이트노벨</a>
+                                        <a href="#">단행본만화</a>
+                                        <a href="#">미분류</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 3 -->
+                            <li><a href="#">오디오북</a>
+                                <div class="subMenuWrap subAudio">
+                                    <div class="subMenu">
+                                        <a href="#">자기계발</a>
+                                        <a href="#">시/에세이</a>
+                                        <a href="#">역사/문화</a>
+                                        <a href="#">여행/취미</a>
+                                        <a href="#">아동</a>
+                                        <a href="#">청소년</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 4 -->
+                            <li><a href="#">이용안내</a>
+                                <div class="subMenuWrap subInfo">
+                                    <div class="subMenu">
+                                        <a href="#">전자도서관 안내</a>
+                                        <a href="#">PC에서 이용하기</a>
+                                        <a href="#">모바일에서 이용하기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">희망도서신청</a></li>
+                        </ul>
+                    </nav>
+                    <!-- 메인 메뉴 영역 종료 -->
+                </div>
+        </header>
+        <!--header 영역 종료 -->
+
+        <!--mainContent 영역 시작-->
+        <div id="mainContentsWrap">
+            <div class="mainConetns">
+                <!-- 좌측 메뉴 영역 시작-->
+                <div class="leftMenu">
+                    <div class="leftInner">
+                        <h2>전자책</h2>
+                        <ul>
+                            <li><a href="#"><span>경제경영</span></a></li>
+                            <li><a href="#"><span>자기계발</span></a></li>
+                            <li><a href="#"><span>시/에세이</span></a></li>
+                            <li><a href="#"><span>인문</span></a></li>
+                            <li><a href="#"><span>종교</span></a></li>
+                            <li><a href="#"><span>소설</span></a></li>
+                            <li><a href="#"><span>국어/외국어</span></a></li>
+                            <li><a href="#"><span>정치/사회</span></a></li>
+                            <li><a href="#"><span>역사/문화</span></a></li>
+                            <li><a href="#"><span>과학/공학</span></a></li>
+                            <li><a href="#"><span>IT/프로그래밍</span></a></li>
+                            <li><a href="#"><span>건강/의학</span></a></li>
+                            <li><a href="#"><span>가정/생활/요리</span></a></li>
+                            <li><a href="#"><span>여행/취미</span></a></li>
+                            <li><a href="#"><span>예술/대중문화</span></a></li>
+                            <li><a href="#"><span>유아</span></a></li>
+                            <li><a href="#"><span>아동</span></a></li>
+                            <li><a href="#"><span>청소년</span></a></li>
+                            <li><a href="#"><span>교재/수험서</span></a></li>
+                            <li><a href="#"><span>외국도서</span></a></li>
+                            <li><a href="#"><span>매거진</span></a></li>
+                            <li><a href="#"><span>로맨스</span></a></li>
+                            <li><a href="#"><span>로맨스판타지</span></a></li>
+                            <li><a href="#"><span>판타지</span></a></li>
+                            <li><a href="#"><span>라이트노벨</span></a></li>
+                            <li><a href="#"><span>단행본만화</span></a></li>
+                            <li><a href="#"><span>미분류</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 좌측 메뉴 영역 종료-->
+
+                <!-- 컨텐츠 영역 시작-->
+                <div class="rightContents">
+                    <div id="skipNavStart" class="contentTitleArea">
+                        <h4>파친코 1</h4>
+                    </div>
+                    <div class="bookImgOuter">
+                        <div class="bookInfo">
+                            <div class="bookLeft">
+                                <img class="bookImg" src="images/best/3.jpg" alt="파친코1">
+                            </div>
+                            <div class="bookInfoRight">
+                                <div class="imgIcons">
+                                    <img src="images/ebook.png" alt="전자책">
+                                    <img src="images/smartphone.png" alt="스마트폰">
+                                    <img src="images/tablet.png" alt="태블릿">
+                                    <img src="images/kyobo.png" alt="교보문고">
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>평점</th>
+                                        <td colspan="3">(참여:0명) <button>리뷰쓰기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <th>페이지</th>
+                                        <td>0 Page</td>
+                                        <th>이용가능환경</th>
+                                        <td>PC,스마트폰,태플릿</td>
+                                    </tr>
+                                    <tr>
+                                        <th>서비스형태</th>
+                                        <td>ePUB</td>
+                                        <th>파일크기</th>
+                                        <td>18M</td>
+                                    </tr>
+                                    <tr>
+                                        <th>대출</th>
+                                        <td>5 / 5</td>
+                                        <th>예약</th>
+                                        <td>30</td>
+                                    </tr>
+                                </table>
+                                <div class="service">
+                                    <p class="btn">
+                                        <a href="#" title="예약하기"><em>예약하기</em></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bookInfoDetail">
+                        <div class="bookInfoMenu">
+                            <ul>
+                                <li>
+                                    <span>책 소개</span>
+                                </li>
+                                <li>
+                                    <span>작가 소개</span>
+                                </li>
+                                <li>
+                                    <span>목차</span>
+                                </li>
+                                <li><span>출판사 서평</span>
+                                </li>
+                                <li><span>독자 리뷰</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bookInfoDetailInner">
+                            <div class="infoComm" id="bookIntro">
+                                <h3>책 소개</h3>
+                                <div>
+                                    <p>“역사는 우리를 저버렸지만, 그래도 상관없다”<br>
+                                        역사에 외면당한 재일조선인 가족의 대서사극<br>
+                                    </p><br>
+                                    <p>
+                                    “내게 ‘한국인’은 이야기의 주인공이 될 가치가 있는 이들이다.<br>
+                                    나는 가능한 한 오래 한국인 이야기를 쓰고 싶다.”<br>
+                                    - ‘한국 독자들에게’ 중에서
+                                    </p><br>
+                                    <p>4대에 걸친 재일조선인 가족의 이야기를 그린 세계적 베스트셀러, 이민진 작가의 장편소설 《파친코》가 새롭게 출간되었다. 《파친코》는 재미교포 1.5세대인 이민진 작가가 30년에 달하는 세월에 걸쳐 집필한 대하소설로, 2017년 출간되어 《뉴욕타임스》 베스트셀러에 올랐다. 현재까지 전 세계 33개국에 번역 수출되었으며, BBC, 아마존 등 75개 이상의 주요 매체의 ‘올해의 책’으로 선정되었을 뿐 아니라 전미도서상 최종 후보에 이름을 올리며 평단과 대중을 모두 사로잡은 작품이다. 버락 오바마 전 미국 대통령으로부터 “회복과 연민에 대한 강력한 이야기”라는 찬사를 받으며 주목을 받았다.</p>
+                                    <p>
+                                        2022년 애플TV가 제작한 동명의 드라마가 공개되며 화제의 중심에 선 《파친코》는 지난 4월 판권 계약이 종료되며 절판되었다가 새로운 번역과 디자인으로 한국 독자에게 돌아왔다. 첫 문장(“역사는 우리를 저버렸지만, 그래도 상관없다”)에서부터 원문의 의미를 보다 충실하게 전달하고자 했으며, 작품 특유의 속도감 있는 문체를 살리고자 노력했다. 또한 작가가 처음 의도한 구조와 흐름을 살리기 위해 총 세 파트(1부 ‘고향’, 2부 ‘모국’, 3부 ‘파친코’)로 된 원서의 구성을 그대로 따랐다. 새 출간을 기념해 ‘한국 독자들에게’ 보내는 글에는 한국인 이야기를 계속해서 쓰는 이유를 밝혔다. 작가는 “우리가 매력적이기 때문”이라며, “한국인은 지적으로나, 감성적으로나 깊이 있는 이야기의 주인공이 될 가치가 있는 이들”이기에 앞으로도 한국의 이야기를 젊은 세대들에게 들려주고 싶다며 한국 독자들에게 각별한 애정을 표했다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="infoComm" id="authorInfo">
+                                <h3>작가 소개</h3>
+                                <p>
+                                    <strong>Min Jin Lee</strong><br>
+                                </p>
+                                <div class="overflowWrap">
+                                    <div class="overflowContent">
+                                        <div class="overflowInner">
+                                            <p>
+                                                전 세계에서 뜨거운 관심과 사랑을 받고 있는 한국계 미국인 소설가. 경계인으로서의 날카로운 시선과 공감을 바탕으로 한 통찰력으로 복잡다단한 역사와 인간의 본질을 포착하며 “제인 오스틴, 조지 엘리엇을 잇는 작가”라는 찬사 속에 세계적인 작가로 발돋움했다.
+                                                <br>
+                                            </p>
+                                            <p>
+                                                1968년 서울에서 태어난 작가는 일곱 살 때 가족과 함께 미국 뉴욕으로 건너갔다. 예일대학교에서 역사학을 공부한 후 조지타운대학교 로스쿨을 졸업하고 변호사로 일했으나, 건강 문제로 그만두게 되면서 오랜 꿈이었던 글쓰기를 시작했다.<br>
+                                            </p>
+                                            <p>
+                                                2004년부터 단편소설들을 발표하며 주목을 받기 시작했고, 2008년 미국 이민자의 이야기를 담은 첫 장편소설 《백만장자를 위한 공짜 음식Free Food for Millionaires》으로 작가로서 이름을 알렸다.<br>
+                                            </p>
+                                            <p>
+                                                두 번째 장편소설 《파친코》는 작가가 역사학과 학생이었던 1989년에 ‘자이니치’라 불리는 재일조선인의 이야기를 써야겠다고 결심한 후 2017년 출간되기까지 30년에 가까운 세월 동안 혼신의 노력을 기울여 집필한 대작이다. 일본계 미국인인 남편과 함께 4년간 일본에 머물며 방대하고 치밀한 조사와 취재 끝에 이 이야기를 완성할 수 있었다. 4대에 걸친 가족사를 일제강점기부터 한국전쟁, 일본 버블경제에 이르기까지의 역사적 흐름 속에서 다룬 이 책은 출간 즉시 미국 사회에 큰 반향을 일으켰다. 《뉴욕타임스》, 《USA투데이》, 아마존, BBC 등 75개가 넘는 주요 매체에서 앞다투어 ‘올해의 책’으로 선정했고, 전미도서상 최종후보에 올랐다. 33개국에 번역 출간되며 세계적인 베스트셀러에 오른 《파친코》는 계속 새로운 역사를 써나가고 있다.이민진 작가는 현재 뉴욕에 거주하며 ‘한국인 디아스포라 3부작’의 완결작이 될 세 번째 장편소설 집필에 몰두하고 있다.
+                                        
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="toggleBtnWrap">
+                                        <button class="toggleBtn toggleBtn1">
+                                            <span class="foldText">펼치기</span>
+                                            <span class="foldIcon"><i class="fa-solid fa-angle-down"></i></span>
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <p><i>번역</i>&nbsp;<strong>신승미</strong></p>
+                                </div>
+                            </div>
+                            <div class="infoComm" id="bookIndex">
+                                <h3>목차</h3>
+                                <div>
+                                    <p>한국 독자들에게</p>
+                                    <p>1부 고향 1910-1933</p>
+                                    <p>2부 모국 1939-1962</p>
+                                </div>
+                            </div>
+                            <div class="infoComm" id="publisherReview">
+                                <h3>출판사 서평</h3>
+                                <div class="overflowWrap">
+                                    <div class="overflowContent">
+                                        <div class="overflowInner">
+                                            <p>
+                                                《파친코》는 재미교포 1.5세대인 이민진 작가가 30년에 달하는 세월에 걸쳐 집필한 대하소설로, 2017년 출간되어 《뉴욕타임스》 베스트셀러에 올랐다. 세계 33개국에 번역 수출되었으며, 《뉴욕타임스》, BBC, 아마존 등 75개 이상의 주요 매체의 ‘올해의 책’, 전미도서상 최종 후보에 선정되며 평단과 대중을 모두 사로잡았다<br>
+                                            </p>
+                                            <p>
+                                                한국의 이야기에 세계를 눈물 짓게 만든 화제작이자 21세기의 새로운 클래식으로 자리매김한 《파친코》(전 2권)를 이제 새롭게 만날 수 있다.<br>
+                                            <br>
+                                            </p>
+                                            <p>
+                                                “역사는 우리를 저버렸지만, 그래도 상관없다”<br>
+                                            </p>
+                                            <p>
+                                                역사에 외면당한 재일조선인 가족의 대서사극<br>
+                                            </p>
+                                            <p>
+                                                이 소설은 일제강점기 부산 영도에서 시작해 버블경제 절정에 이르렀던 1989년 일본까지, 한국과 일본을 무대로 거의 100년에 걸쳐 펼쳐진다. 어머니 양진과 함께 허름한 하숙집을 꾸리며 살아가는 열여섯 선자는 일본을 오가며 일하는 생선 중개상인 한수를 만나 처음으로 조선 밖의 더 넓은 세상을 상상하기 시작하지만, 그의 아이를 가진 뒤에야 그가 오사카에 아내와 아이를 둔 남자임을 깨닫고 상심한다. 한편 선자네 하숙집 손님으로 온 목사 이삭은 선자를 자신의 운명으로 여겨 청혼을 하고, 선자는 이삭과 결혼해 오사카로 건너가 새로운 삶을 시작한다. 그러나 조선인이자 여성으로서 차별과 멸시를 견디며 "더 이상 일할 수 없을 때까지 일해"(338쪽) 자신과 가족을 지켜내야만 하는 선자의 삶은 지난하고도 고되었다. 선자를 둘러싼 파란만장한 가족사를 따라가다 보면 자연스럽게 해방, 한국전쟁, 분단 등 한국 근현대사와 겹쳐지며, 우리가 미처 알지 못했던 ‘자이니치(재일동포를 일컫는 말)’의 삶이 눈에 들어오면서 가슴이 먹먹해진다.<br>
+                                            </p>
+                                            <p>
+                                                이 책을 쓴 이민진 작가는 일곱 살 때 가족과 함께 미국으로 건너간 한국계 미국인 작가다. 이민 1.5세대이자 역사 전공자로서 불안정한 국제 정세과 일제 침략이 낳은 한국 근현대사의 비극에 관심을 갖게 된 작가는, “역사가 함부로 제쳐놓은 사람들”의 이야기를 써야겠다고 마음먹었다. 그러나 예일대에서 역사학을 공부하며 ‘자이니치’의 존재에 대해 처음 알게 된 그 시절에서부터 이 책을 출간하기까지 30년이라는 긴 시간이 필요했다. 일본계 미국인 남편과 함께 일본에 머물면서 수많은 사람을 만나 인터뷰한 작가는 그때까지 쓴 초고를 모두 버리고 다시 집필을 시작했다. “역사적 재앙에 맞선 평범한 개개인의 이야기”가 되어야 한다는 확신이 들었기 때문이었다. 주인공은 재일조선인 3세 ‘솔로몬’에서 ‘선자’로 바뀌었고, 제목은 《모국》 대신 《파친코》가 되었다. 오랜 자료 조사와 인터뷰, 수차례의 집요한 퇴고 끝에, 마침내 “다큐멘터리의 디테일과 뛰어난 소설적 공감이 어우러진 역작”, 《파친코》가 탄생할 수 있었다.<br>
+                                                <br>
+                                            </p>    
+                                            “파친코는 바보 같은 게임이지만, 인생은 그렇지 않다”<br>
+                                            ‘한국인 디아스포라 3부작’을 향한 묵묵한 여정<br>
+                                            <p>
+                                                《파친코》는 ‘집에 대한 이야기’이기도 하다. 역사의 거대한 파도에 굴하지 않고 꿋꿋하게 자신의 집을 꾸려가는 이민자 가족의 연대기이기 때문이다. 작가는 책의 제목인 ‘파친코’가 “도박처럼 결과를 예측할 수 없는 인생의 불확실성을 뜻함과 동시에, 혐오와 편견으로 가득한 타향에서 생존을 위한 유일한 수단으로서 파친코 사업을 선택해야 했던 재일조선인들의 비극적 삶을 상징한다”고 밝힌 바 있다. 고향을 떠나 타지에 뿌리내리고 영원한 이방인으로 살아야 하는 이민자의 삶을 작가는 특유의 통찰력과 공감 어린 시선으로 어루만진다. 가족, 사랑, 상실, 돈과 같은 인생의 모든 문제를 다루면서, 동시대를 살아가는 독자에게 가장 시의적절한 질문을 던지는 작품 《파친코》는, 세대와 문화를 뛰어넘는 이야기의 힘을 증명하며 하나의 문화적 아이콘으로 떠올랐다.<br>
+                                            </p>
+                                            <p>
+                                                이 책은 이민진 작가의 데뷔 소설 《백만장자를 위한 공짜 음식Free Food for Millionaires》에 이은 두 번째 장편소설이며, 현재 작가는 한국인들의 교육열에 관한 세 번째 장편소설 《아메리칸 학원American Hagwon》을 집필하고 있다. 작가는 이 소설들을 ‘한국인 디아스포라 3부작’으로 소개한다. 그가 이처럼 한국인 이야기를 계속해서 쓰는 이유에 대해 서문 ‘한국 독자들에게’에서, “우리가 매력적이기 때문”이라며, “한국인은 지적으로나, 감성적으로나 깊이 있는 이야기의 주인공이 될 가치가 있는 이들”이기에 앞으로도 한국의 이야기를 젊은 세대들에게 들려주고 싶다고 밝혔다.<br>
+                                            <br>
+                                            </p>
+                                            원작에 충실한 번역과 구성으로 새롭게 만나는 《파친코》<br>
+                                            2017년에 국내에 소개된 후 판권 계약이 종료되며 지난 4월 절판되었던 《파친코》는 새로운 번역과 디자인으로 한국 독자들에게 돌아왔다. 첫 문장(“역사는 우리를 저버렸지만, 그래도 상관없다”)에서부터 원문의 의미를 보다 충실하게 전달하고자 했으며, 작품 특유의 속도감 있는 문체를 살리고자 노력했다. 또한 작가가 처음 의도한 구조와 흐름을 살리기 위해 총 세 파트(1부 ‘고향’, 2부 ‘모국’, 3부 ‘파친코’)로 된 원서의 구성을 그대로 따랐다. 여기에 새 출간을 기념해 작가 사인 및 서문 ‘한국 독자들에게’를 수록했다. 작가는 새롭게 선보이는 한국어 번역본에 대해 “번역은 문학의 천사와 예술가의 작업”이라며 번역가에게 감사를 전하는 한편, 책을 기다려준 한국 독자들에게 각별한 애정을 표했다. 바로 지금, 전 세계를 들썩이게 한 우리의 이야기를 만날 시간이다.<br>
+                                            <br>
+
+                                            ■ ■ ■ 줄거리<br>
+                                            <p>
+                                                일제강점기 조선, 부산 끄트머리에 자리한 작고 아름다운 섬 영도. 빼앗긴 나라에서 근근이 살아가는 고된 삶이지만 양진과 훈이는 하숙집을 운영하며 하나뿐인 딸 선자를 애지중지 기른다. 훈이가 결핵으로 일찍 세상을 떠난 후에도 양진과 선자는 함께 하숙집을 꿋꿋이 꾸려나간다. 열여섯이 된 선자는 제주 출신의 조선인으로 일본에서 일하는 생선 중개상 고한수를 만나 사랑에 빠진다. 그가 오사카에 아내와 딸들을 둔 유부남임을 알았을 때는 이미 그의 아이를 가진 후였다.<br>
+                                            </p>
+                                            <p>
+                                                오사카로 가는 여행 도중 선자네 하숙집에 머물던 개신교 목사 백이삭은 선자를 자신의 운명이라고 여겨 청혼을 하고, 선자는 이삭을 따라 오사카로 향한다. 그러나 그곳에는 열일곱의 선자가 상상한 것과는 전혀 다른 삶이 기다리고 있었다.<br>
+                                            </p>
+                                            <p>
+                                                이것은 양진에서 선자, 모자수, 솔로몬까지 4대로 이어지는 한국인 이민자 가족의 이야기이다.<br>
+                                            </p>
+                                            <br>
+                                            ■ ■ ■ 등장인물<br>
+                                            <p>
+                                            <strong>선자</strong> 1910년대 조선의 작은 섬 영도에서 하숙집 딸로 태어났다. 돌아가신 아버지의 사랑을 듬뿍 받은 선자는 조용하지만 솔직하고 단단한 소녀로 자란다. 어머니를 도와 하숙집을 운영해나가던 열일곱 살 봄, 운명에 이끌려 일본으로 향한다.<br>
+                                            </p>
+                                            <p>
+                                                <strong>한수</strong> 열두 살 때 아버지를 따라 제주에서 오사카로 건너간 후 수단과 방법을 가리지 않고 성공한 남자로, 세상 물정에 밝고 사리 판단이 빠르다. 생선 중개상으로 부산과 일본을 오가다 선자를 만나 첫눈에 끌린다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>이삭</strong> 평양의 유복한 기독교 집안 출신의 목사. 태어날 때부터 몸이 약해 평생 병치레를 했다. 형 요셉이 살고 있는 오사카로 가는 도중 선자네 하숙집에 잠시 묵으려다가 결핵으로 쓰러져 발이 묶인다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>양진 선자의 어머니.</strong> 영도의 가난한 집 막내딸로 태어나 훈이와 중매결혼한 후 평생 쉼 없이 일했다. 네 번의 출산 끝에 유일하게 살아남은 딸 선자와 함께 하숙집을 운영한다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>훈이 선자의 아버지.</strong> 입술과 발에 장애를 가지고 태어났음에도 누구보다 부지런하고 성실한 남자로 주변에서 존경을 얻는다. 영도에서 작은 하숙집을 운영하며 외동딸 선자를 소중히 길렀다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>요셉 이삭의 형.</strong> 오사카에 있는 공장에서 일하며 평양에 있는 양가 부모님을 부양한다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>경희 요셉의 아내.</strong> 요셉과 이삭 형제와 같은 평양 출신으로 어릴 때부터 가깝게 자랐다.<br>
+                                            </p>
+                                            <p>
+                                            <strong> 노아 선자의 첫째 아들.</strong> 1930년대 오사카에서 태어났다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>모자수 선자의 둘째 아들.</strong> 모자수는 ‘모세’의 일본식 이름이다. 파친코를 운영하는 사장이 된다.<br>
+                                            </p>
+                                            <p>
+                                            <strong>솔로몬</strong> 모자수의 외아들이자 선자의 손자. 1960년대 오사카에서 태어났다.<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="toggleBtnWrap">
+                                        <button class="toggleBtn toggleBtn2">
+                                            <span class="foldText">펼치기</span>
+                                            <span class="foldIcon"><i class="fa-solid fa-angle-down"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="infoComm" id="readerReview">
+                                <h3>독자 리뷰</h3><span class="total">총 <strong>0개</strong></span>
+                                <form class="reviewForm" method="post">
+                                    <section class="score">
+                                        <strong>평점</strong>
+                                        <label for="point5">
+                                            <input type="radio" name="point" id="point5" class="scorePoint" title="5점" checked>
+                                            <span class="scoreStar" title="5점">★★★★★</span>
+                                        </label>
+                                        <label for="point4">
+                                            <input type="radio" name="point" id="point4" class="scorePoint" title="4점">
+                                            <span class="scoreStar" title="4점">★★★★☆</span>
+                                        </label>
+                                        <label for="point3">
+                                            <input type="radio" name="point" id="point3" class="scorePoint" title="3점">
+                                            <span class="scoreStar" title="3점">★★★☆☆</span>
+                                        </label>
+                                        <label for="point2">
+                                            <input type="radio" name="point" id="point2" class="scorePoint" title="2점">
+                                            <span class="scoreStar" title="2점">★★☆☆☆</span>
+                                        </label>
+                                        <label for="point1">
+                                            <input type="radio" name="point" id="point1" class="scorePoint" title="1점">
+                                            <span class="scoreStar" title="1점">★☆☆☆☆</span>
+                                        </label>
+
+                                    </section>
+                                    <section class="txtReviewArea">
+                                        <textarea name="txtReview" id="txtReview" rows="5" maxlength="500" placeholder="로그인 후 리뷰 작성이 가능합니다."></textarea>
+                                        <span><a href="#readerReview" title="리뷰등록">리뷰등록</a></span>
+                                    </section>
+                                    <section class="reviewInfo">
+                                        <p>한글 500자 이내로 입력해 주세요 (<span>0/500</span>)</p>
+                                    </section>
+                                </form>
+                                <div class="registered">
+                                    <p>등록된 리뷰가 없습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 컨텐츠 영역 종료 -->
+            </div>
+            <!-- top button -->
+            <a href="#header" class="topBtn" title="최상위로">TOP</a>
+        </div>
+        <!--main contents 영역 종료-->
+
+        <!-- footer 영역 시작-->
+        <footer id="footer">
+            <div class="footerInner">
+                <div class="footerLeft">
+                    <a href="index.html" title="고양시 전차책도서관 바로가기" target="_self">
+                        <img src="images/logo_foot.png" alt="footer logo">
+                    </a>
+                    <address>
+                    도서관명 : 고양시 전자책도서관 | 주소 : 고양시 덕양구 은빛로77번길 8(화정동,화정도서관)<br>
+                    대표전화 : 031-8075-9215 | 팩스 : -<br>
+                    Copyright ⓒ 고양시도서관센터. 대표전화 : 031-8075-9215. All rights reserved.<br>
+                    </address>
+                </div>
+
+                <div class="footerRight">
+                    <div class="familySite">
+                        <button class="btnFamily">
+                            <span class="btnText">Family Site</span>
+                            <!--<span class="arrow">g</span>-->
+                            <span class="arrow"><i class="fa-solid fa-chevron-up"></i></span>
+                        </button>
+                        <div class="familyUl">
+                            <ul>
+                                <li><a href="https://www.goyanglib.or.kr/">고양시도서관센터</a></li>
+                                <li><a href="https://www.library.kr/cyber/index.do">경기도사이버도서관</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerSns">
+                        <a class="postLink" href="https://post.naver.com/goyang_library" title="네이버포스트바로가기" target="_blank">
+                            <span class="hidden">네이버포스트</span>
+                        </a>
+                        <a class="instagramLink" href="https://www.instagram.com/goyang_library/" title="인스타그램바로가기" target="_blank">
+                            <span class="hidden">인스타그램</span>
+                        </a>
+                        <a class="facebookLink" href="https://www.facebook.com/goyanglib.or.kr" title="페이스북바로가기" target="_blank">
+                            <span class="hidden"></span>
+                        </a>
+                        <a class="blogLink" href="https://blog.naver.com/goyang_lib" title="네이버블로그배로가바" target="_blank">
+                            <span class="hidden">네이버블로그</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer 영역 종료 -->
+    </div>
+    <script src="https://kit.fontawesome.com/3d4603cd1d.js" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/ebookContents.js"></script>
+</body>
+</html>

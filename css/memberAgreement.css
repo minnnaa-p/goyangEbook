@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+
+
+/* 메인컨텐츠 영역*/
+.currentStep {
+    border-left: 1px solid #eee;
+}
+.currentStep::after {
+    border-left:20px solid #e9f7e1;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:0px;
+    left:357px;
+}
+.joinStep .step {
+    border-right: 1px solid #eee;
+}
+.agreeWrap {
+padding-bottom: 20px;
+}
+.agreeBox {
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.agreeBox:first-child {
+    height: 110px;
+}
+.agreeBox .title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.agreeBox h5 {
+    margin: 15px 0;
+    font-size: 15px;
+}
+.agreeBox h4 {
+    margin : 15px 0;
+    font-size: 14px;
+}
+.agreeBox ul li {
+    text-indent: 10px;
+    margin: 5px 0;
+    font-size: 13px;
+}
+.agreeBox p, .agreeBox li {
+    line-height: 18px;
+    font-size: 13px;
+}
+.agreeBox p {
+    margin: 5px 0;
+}
+.agreeBox ul li ul li {
+    text-indent: 10px;
+}
+.agreeBox p:not(.title) {
+    text-indent: 5px;
+}
+.agreeBox a {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #eee;
+    font-size: 13px;
+
+}
+.agreeChk{
+    width: 690px;
+    margin: 10px 0 15px 0;
+    padding-left: 10px;
+}
+.chk, .chkAll {
+    font-size: 14px;
+} 
+.all {
+    margin-top: 0;
+}
+.chk input[type='checkbox'] {
+    position: relative;
+    vertical-align: middle;
+}
+
+.btnArea a {
+    display: inline-block;
+    padding: 15px 30px;
+    background:#aaa;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 5px;
+}

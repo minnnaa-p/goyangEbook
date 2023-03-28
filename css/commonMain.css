@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+
+
+/* 메인컨텐츠 공통 부분 설정*/
+
+
+/*왼쪽 메뉴 영역 */
+.leftMenu {
+    float: left; /* 0315 8시 작성*/
+    display: inline-block;
+    width: 280px;
+    /*float: left;*/
+}
+.leftInner {
+    width: 200px;
+    margin: 0 auto;
+}
+.leftInner h2 {
+    padding: 10px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.25em;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 40px;
+    background:linear-gradient(to right,#91D968  0%,#8bcb65 50%, #89d25e 100%);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+.leftInner ul {
+    /*padding: 20px 30px;*/
+    padding-top: 2px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.leftInner li {
+    width: 100%;
+    box-sizing: border-box;
+}
+.leftInner ul>li>a, .leftInner ul>li>a>span {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+.leftInner ul>li>a {
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+.leftInner ul>li>a>span {
+    letter-spacing: 1px;
+}
+/*
+.leftInner li {
+    width: 100%;
+    padding: 5px 30px;
+    box-sizing: border-box;
+}
+.leftInner ul>li>a, .leftInner ul>li>a>span {
+    width: 100%;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+.leftInner ul>li>a>span {
+    display: inline-block;
+    letter-spacing: 1px;
+}*/
+.leftInner ul>li:hover, .leftInner ul>li>a:focus {
+    background-color:#e9f7e1;
+} 
+
+/*오른쪽 컨텐츠 영역*/
+.rightContents{
+
+    display: inline-block;
+    border-top: 4px solid #89d25e;
+    width: 740px; /*3월 15일 8시 744->740으로 수정*/
+    padding: 0 10px;
+    box-sizing: border-box;
+    /*height: auto; 3월15일 8시 주석처리*/
+}
+
+.contentTitleArea {
+    margin: 20px 0;
+}

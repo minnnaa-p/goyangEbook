@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+
+
+/* 메인컨텐츠 영역*/
+/* 가입 단계 영역 부분 */
+.currentStep {
+    border-right: 1px solid #eee;
+}
+.step {
+    border-left: 1px solid #eee; 
+}
+.currentStep::after {
+    border-right:20px solid #e9f7e1;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:0px;
+    left:343px;
+}
+
+/* 회원가입 폼*/
+.require {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    white-space: nowrap;
+    text-indent: 12px;
+    overflow: hidden;
+}
+.require::before {
+    font-size: 0.9em;
+    color:#E66B62;
+    content: '*';
+    position: relative;
+    left: -10px;
+    top: 3px
+}
+.joinWrap {
+    margin-top: 20px;
+    color: #333;
+}
+.joinWrap>p {
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.joinWrap table {
+    margin-top: 10px;
+    border-top: 1px solid #d4ddd2;
+    border-bottom: 1px solid #d4ddd2;
+    border-collapse: collapse;
+    font-size: 1.1em;
+    width: 724px;
+}
+.joinWrap table th {
+    width: 130px;
+    background-color:#e9f7e1;
+    text-align: left;
+    padding: 20px 15px;
+}
+.joinWrap table th .require {
+    font-size: 0.9em;
+    top:-5px;
+}
+.joinWrap table th span {
+    margin-left: 2px;
+}
+.joinWrap table tr:nth-child(7) th span, .joinWrap table tr:nth-child(8) th span {
+    margin-left: 13px;
+}
+.joinWrap table tr {
+    border-bottom: 1px solid #d4ddd2;
+}
+.joinWrap table td:nth-child(2) {
+    padding-left: 10px;
+}
+.joinWrap table td:nth-child(2) input {
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+}
+.joinWrap table td input {
+    height: 28px;
+}
+.joinWrap table #name {
+    width: 212px;
+}
+.joinWrap table td #birthYY, #birthMM, #birthDD,#mobileNum2,#mobileNum3,#phoneNum2,#phoneNum3 {
+    width: 100px;
+}
+.joinWrap table td #birthMM,#mobileNum1, #phoneNum1 {
+    width: 108px;
+    height: 34.13px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+}
+.joinWrap table td #id, #password, #passwordChk{
+    width: 212px;
+}
+.joinWrap table tr:nth-child(3)  {
+    height: 80px;
+}
+.joinWrap table tr:nth-child(3) td:nth-child(2) span, .joinWrap table tr:nth-child(3) td:nth-child(2) a {
+    display: inline-block;
+    width: 96.5px;
+    background-color: #eaeaea;
+
+}
+.joinWrap table tr:nth-child(3) td:nth-child(2) a {
+    padding: 8px 5px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+}
+.joinWrap table td:nth-child(2) p {
+    margin-top: 5px;
+    font-size: 0.85em;
+    letter-spacing: -1px;
+    color: #333;
+}
+
+.joinWrap table tr:nth-child(4),.joinWrap table tr:nth-child(5), .joinWrap table tr:nth-child(6){
+    height: 80px;
+}
+
+.joinWrap table td:nth-child(2) .chkbox {
+    margin-left: 5px;
+}
+.joinWrap table td:nth-child(2) .chkbox #smsNoti {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+.joinWrap table td:nth-child(2) .chkbox label {
+
+    font-size: 0.9em;
+}
+
+.joinWrap table td #emailId{
+    width: 145px;
+}
+.joinWrap table td #emailDomain {
+    width: 145px;
+}
+.joinWrap table td #domainList {
+    width: 120px;
+    height: 34.13px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+}
+
+.joinWrap table tr:nth-child(9) td:nth-child(2) span, .joinWrap table tr .addr .zipcodeArea span>a {
+    display: inline-block;
+    width: 96.5px;
+    background-color: #eaeaea;
+
+}
+.joinWrap table tr:nth-child(9) {
+    height: 80px;
+}
+.zipcodeArea {
+    margin: 10px 0;
+}
+.zipcodeArea #zipcode {
+    width: 105px;
+    height: 34.13px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+    box-sizing: border-box;
+}
+.joinWrap table tr .addr .zipcodeArea span>a {
+    padding: 8px 5px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+    cursor: pointer;
+}
+
+.addrDetailArea {
+    margin-bottom: 10px;
+}
+.addrDetailArea #addrDetail {
+    width: 445px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+}
+
+.joinWrap table td #library {
+    width: 216px;
+    height: 34.13px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+}
+
+/*우편번호 검색 팝업*/
+.popupZipcode {
+    position: absolute;
+    width: 490px;
+    height: 150px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 5px 5px;
+    z-index: 100;
+    display: none;
+}
+.popupZipcode .popupTitle {
+    padding: 10px 15px;
+    background:linear-gradient(to right,#91D968  0%,#8bcb65 50%, #89d25e 100%);
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    box-sizing: border-box;
+}
+.popupZipcode>a{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer
+}
+.popupContent {
+    padding: 0 20px 20px 20px;
+
+}
+
+.popupContent #zipcodeFind {
+    padding: 2px;
+    width: 380px;
+    height: 25px;
+    border: 3px solid #89d25e;
+    border-radius: 2px;
+    color: #333;
+    font-size: 0.8em;
+}
+.addr .zipcodeArea .popupZipcode .popupContent p{
+    margin: 10px 0;
+    color: #666;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+.addr .zipcodeArea .popupZipcode .popupContent a {
+    padding: 8px 10px;
+    height: 35px;
+    font-size: 0.9em;
+    background:linear-gradient(to right,#91D968  0%,#8bcb65 50%, #89d25e 100%);
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+/*버튼영역*/
+.btnArea {
+    margin-top: 10px;
+}
+/*취소 버튼*/
+.btnArea .btnCancel {
+    background: #aaaaaa;
+    padding: 15px 45px;
+}

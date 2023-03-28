@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+/* 왼쪽 메뉴 영역*/
+
+/* 메인컨텐츠 영역 공동설정*/
+.contentTitleArea h4 {
+    font-size: 1.1em;
+}
+.toggleBtnWrap {
+    display: block;
+    text-align: right;
+    height: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.toggleBtn {
+    padding: 0;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    background: rgba(0,0,0,0);
+}
+.toggleBtnWrap .foldText{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.toggleBtnWrap .foldIcon {
+    display: inline-block;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border: 1.5px solid #666;
+    border-radius: 50%;
+    vertical-align: middle;
+    /*background: url('../images/down.png') center no-repeat;*/
+}
+
+.fa-solid {
+    font-size: 0.6em;
+    color: #666;
+    font-weight: 200;
+}
+.foldIcon .fa-angle-up {
+
+    position: absolute;
+    top:4px;
+    left: 4px;
+}
+
+.foldIcon .fa-angle-down {
+
+    position: absolute;
+    top:4px;
+    left: 4px;
+}
+
+/*메인 컨텐츠 오른쪽 영역*/
+.bookInfoMenu {
+    border-top: 2px solid #8bcb65 ;
+    background: #fff;
+}
+.bookInfoMenu.menuActive{
+    position: fixed;
+    top:190px;
+    z-index:2;
+}
+.addPaddingTop {
+    padding-top: 200px;
+}
+.bookInfoDetail .bookInfoMenu ul {
+    margin: 15px auto;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+
+}
+.bookInfoDetail .bookInfoMenu ul li {
+    display: inline-block;
+    width: 140px;
+}
+.bookInfoMenu ul>li>span {
+    display: inline-block;
+
+    cursor: pointer;
+}
+.bookImgOuter {
+    /*height: 260px;*/
+    overflow: hidden;
+    padding: 20px 30px;
+    background-color: #efefef;
+    box-sizing: border-box;
+}
+.bookInfo .bookLeft {
+    display: inline-block;
+    float: left;
+    width: 150px;
+}
+.bookInfo .bookLeft img{
+    width: 150px;
+}
+.bookInfo .bookInfoRight {
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+
+    display: inline-block;
+}
+.bookInfoRight {
+    width: 500px;
+}
+.bookInfoRight table {
+    margin-top: 5px;
+    width: 500px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    font-size: 0.9em;
+}
+.bookInfoRight table tr {
+    height: 30px;
+}
+.bookInfoRight table tr:not(:last-child) {
+    border-bottom: 1px dotted #666;
+}
+.bookInfoRight table button {
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #efefef;
+}
+.bookInfoRight table th{
+    width: 100px;
+    padding-left: 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.bookInfoRight table tr td:nth-child(2n) {
+    width: 140px;
+    padding-left: 10px;
+}
+.service {
+    margin: 10px 0;
+}
+.service p {
+    margin-top: 10px;
+    text-align: right;
+}
+.service a{
+    display: inline-block;
+    padding: 15px 25px;
+    background-color:#4781E6;
+    border-radius: 5px;
+}
+.service a em {
+    color: #fff;
+
+}
+.bookInfoDetail {
+    margin-top: 15px;
+    /*border-top: 2px solid #8bcb65 ;*/
+}
+
+
+.bookInfoDetailInner {
+    padding: 15px;
+    box-sizing: border-box;
+}
+.infoComm {
+    margin: 10px 0 30px 0;
+    line-height: 1.5em;
+}
+.infoComm h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+.infoComm div {
+    color: #333;
+}
+.overflowWrap>.overflowContent {
+    max-height: 66px;
+}
+.overflowWrap.active>.overflowContent{
+    max-height: none !important;
+}
+.overflowWrap .overflowContent .overflowInner {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 66px;
+    line-height: 22px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: -o-ellipsis-lastline;
+    white-space: normal;
+    word-break: break-all;
+}
+.overflowWrap.active .overflowContent .overflowInner {
+    display: block;
+    height: auto;
+    max-height: none;
+    -webkit-box-orient: inherit;
+    -webkit-line-clamp: inherit;
+}
+.infoComm .overflowInner p{
+    text-indent: 10px;
+    letter-spacing: -0.01em;
+}
+
+
+#readerReview {
+    margin-bottom: 0px;
+}
+#readerReview h3 {
+    display: inline-block;
+}
+#readerReview .total {
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+.total strong {
+    color: #194FE6;
+    margin-left: 3px;
+}
+.score {
+    margin-bottom: 10px;
+}
+.score strong {
+    margin-right: 10px;
+}
+.score label {
+    margin: 0 10px 0 5px;
+}
+.reviewForm input {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.txtReviewArea textarea {
+    resize: none;
+    width: 600px;
+}
+.txtReviewArea span, .txtReviewArea span a {
+    display: inline-block;
+    width: 80px;
+    height: 93px;
+    background:linear-gradient(#66c96b  0%, #6bc770 50%, #66c96b  100%);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 95px;
+    color: #fff;
+}
+.reviewInfo p{
+    text-align: right;
+    margin-right: 95px;
+    font-size: 0.85em;
+}
+.reviewInfo p span {
+    display: inline-block;
+    width: 63px;
+}
+.registered {
+    margin-top: 10px;
+    height: 100px;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+    background-color: #efefef;
+    line-height: 100px;
+}
+.registered p {
+    margin: 0 auto;
+
+}

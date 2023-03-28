@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양시 전자책 도서관</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+</head>
+<body>
+    <!--건너띄기 링크 -->
+    <a id="skipNav" href="#skipNavStart">본문가로가기</a>
+
+    <!-- wrapper(전체 콘텐츠 영역 시작)-->
+    <div id="wrapper">
+
+        <!--header영역 시작-->
+        <header id="header">
+            <!-- 탑 메뉴 영역시작-->
+            <div class="topMenuArea">
+                <ul class="topMenu">
+                    <li><a href="#" title="로그인">로그인</a></li>
+                    <li><a href="memberAgreement.html" title="회원가입">회원가입</a></li>
+                    <li><a href="#" title="사이트맵">사이트맵</a></li>
+                </ul>
+            </div>
+            <!-- 탑 메뉴 영역 종료-->
+
+            <!-- 로고/서치/메인메뉴 영역 시작 -->
+                <div class="menuWrap">
+
+                    <!-- 로고 / 서치 영역  -->
+                    <div class="logoAndSearch">
+
+                        <!--로고 영역 -->
+                        <div class="logoArea">
+                            <h1 class="logo">
+                                <a href="index.html" title="메인화면으로이동">
+                                    <img src="images/logo.png" alt="logo">
+                                </a>
+                            </h1>
+                        </div>
+
+                        <!--검색 영역-->
+                        <div class="selectAndSearch">
+
+                                <!-- 검색 유형 선택 영역 -->
+                                <div class="selectArea">
+                                    <select name="cate" id="cate" title="검색유형선택">
+                                        <option value="allCate">전체</option>
+                                        <option value="ebook">전자책</option>
+                                        <option value="autioBook">오디오북</option>
+                                    </select>
+                                </div>
+
+                                <!-- 검색 영역  -->
+                                <div class="searchArea">
+                                    <input type="search" class="search">
+                                </div>
+                                <a href="#" class="btnSearch" title="검색">
+                                    검색
+                                </a>
+                        </div>
+                    </div>
+                    <!-- 로고 서치 영역 종료-->
+    
+                    
+                    <!-- 메인 메뉴 영역 시작-->
+                    <nav>
+                        <h2 class="hidden">메인메뉴</h2>
+                        <ul class="mainMenu">
+                            <!-- 주메뉴 1 -->
+                            <li><a href="#">도서관소식</a>
+                                <div class="subMenuWrap  subNotice subMenuAct">
+                                    <div class="subMenu">
+                                        <a href="#">공지사항</a>
+                                        <a href="#">자주하는질문</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 2 -->
+                            <li><a href="ebook.html">전자책</a>
+                                <div class="subMenuWrap subEbook">
+                                    <div class="subMenu">
+                                        <a href="#">경제경영</a>
+                                        <a href="#">자기계발</a>
+                                        <a href="#">시/에세이</a>
+                                        <a href="#">인문</a>
+                                        <a href="#">종교</a>
+                                        <a href="#">소설</a>
+                                        <a href="#">국어/외국어</a>
+                                        <a href="#">정치/사회</a>
+                                        <a href="#">역사/문화</a>
+                                        <a href="#">과학/공학</a>
+                                        <a href="#">IT/프로그래밍</a>
+                                        <a href="#">건강/의학</a>
+                                        <a href="#">가정/생활/요리</a>
+                                        <a href="#">여행/취미</a>
+                                        <a href="#">예술/대중문화</a>
+                                        <a href="#">유아</a>
+                                        <a href="#">아동</a>
+                                        <a href="#">청소년</a>
+                                        <a href="#">교재/수험서</a>
+                                        <a href="#">외국도서</a>
+                                        <a href="#">매거진</a>
+                                        <a href="#">로맨스</a>
+                                        <a href="#">로맨스판타지</a>
+                                        <a href="#">판타지</a>
+                                        <a href="#">라이트노벨</a>
+                                        <a href="#">단행본만화</a>
+                                        <a href="#">미분류</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 3 -->
+                            <li><a href="#">오디오북</a>
+                                <div class="subMenuWrap subAudio">
+                                    <div class="subMenu">
+                                        <a href="#">자기계발</a>
+                                        <a href="#">시/에세이</a>
+                                        <a href="#">역사/문화</a>
+                                        <a href="#">여행/취미</a>
+                                        <a href="#">아동</a>
+                                        <a href="#">청소년</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 주메뉴 4 -->
+                            <li><a href="#">이용안내</a>
+                                <div class="subMenuWrap subInfo">
+                                    <div class="subMenu">
+                                        <a href="#">전자도서관 안내</a>
+                                        <a href="#">PC에서 이용하기</a>
+                                        <a href="#">모바일에서 이용하기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">희망도서신청</a></li>
+                        </ul>
+                    </nav>
+                    <!-- 메인 메뉴 영역 종료 -->
+                </div>
+        </header>
+        <!--header 영역 종료 -->
+
+        <!--mainContent 영역 시작-->
+        <div id="mainContentsWrap">
+            <div class="mainConetns">
+                <!-- main image 영역 시작-->
+                <div class="mainImage">
+                    <h2 class="mainImageTxt1">행복한 도서관,</h2>
+                    <h2 class="mainImageTxt2">편리한 도서관</h2>
+                    <p><span>언</span><span>제</span><span>&nbsp;</span><span>어</span><span>디</span><span>서</span><span>나</span><span>&nbsp;</span><span>편</span><span>리</span><span>하</span><span>게</span><span>&nbsp;</span><span>독</span><span>서</span><span>를</span><span>&nbsp;</span><span>즐</span><span>기</span><span>세</span><span>요</span><span>.</span></p>
+                </div>
+
+                <!-- 베스트 자료 영역 시작-->
+                <div id="skipNavStart" class="bookOuter">
+                    <div class="contentTitleArea">
+                        <h3 class="contentTitle">베스트 자료</h3>
+                        <a href="bestbook.html" class="more" title="베스트자료 더보기"> 더보기</a>
+                    </div>
+                    <div class="bookInner">
+                        <span class="btnEventPrev" title="이전 베스트자료보기"><i class="fa-solid fa-chevron-left"></i></span>
+                        <div class="animation-slide">
+                            <div class="slider-panel">
+                            
+                            </div>
+                            <!-- slide panel 종료-->
+                        </div>
+                        <!--animation-slide종료-->
+                        <span class="btnEventNext" title="다음 베스트자료보기"><i class="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                </div>
+
+                <!--신착자료 영역 시작-->
+                <div class="bookOuter">
+                    <div class="contentTitleArea">
+                        <h3 class="contentTitle">신착 자료</h3>
+                        <a href="#" class="more" title="신착자료 더보기"> 더보기</a>
+                    </div>
+                    <div class="bookInner">
+                        <ul class="booksWrap newBook">
+                            <!-- 자바스크립트로 랜덤하게 신착자료 뿌려줌 -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공지사항 info 영역 시작-->
+                <div class="noticeInfo">
+                    <!-- 이미지 배너영역  -->
+                    <div class="imgBanner">
+                        <div class="banner_slide_panel">
+                            <img class="banner_img" src="images/banner/banner01.jpg" alt="배너1">
+                            <img class="banner_img" src="images/banner/banner02.jpg" alt="배너2">
+                        </div>
+                        <div class="control_panel">
+                            <div class="control_btn"></div>
+                            <div class="control_btn"></div>
+                        </div>
+                    </div>
+                    <!-- 최근 대출/반납 자료 종료  -->
+
+                    <!-- 공지 사항-->
+                    <div class="notice" >
+                        <h3>공지사항</h3>
+                        <a href="#" class="more" title="공지사항 더보기"> 더보기</a>
+                        <div class="notiInfoTable notiContents">
+                            <table>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>날짜</th>
+                                </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#" title="공지사항1"><span>대출 및 연장일수 변경 안내(3월 2일 09:00부터) </span></a></td>
+                                        <td><time datetime=2023-02-23>2023.02.23</time></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="#" title="공지사항2"><span>대출, 반납 스마트폰 알림 설정 방법</span></a></td>
+                                        <td><time datetime=2022-10-17>2022.10.17</time></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#" title="공지사항3"><span>경기도 구독형 전자책 이용안내(예약없이 이용가능)</span></a></td>
+                                        <td><time datetime=2022-09-16>2022.09.16</time></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><a href="#" title="공지사항4"><span>전자책 보기 클릭 시 반응 없음 해결법</span></a></td>
+                                        <td><time datetime=2022-06-08>2022.06.08</time></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><a href="#" title="공지사항5"><span>전자자료 희망도서 신청 기준</span></a></td>
+                                        <td><time datetime=2018-09-08>2018.09.08</time></td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 대출 방법 안내-->
+                    <div class="checkoutInfo">
+                        <h3>대출안내</h3>
+                        <div class="notiInfoTable chkInfoContents">
+                            <table>
+                                <tr>
+                                    <th>이용대상</th>
+                                    <td>고양시 도서관 정회원</td>
+                                </tr>
+                                <tr>
+                                    <th>대출가능 권수</th>
+                                    <td>1인 최대 20권</td>
+                                </tr>
+                                <tr>
+                                    <th>대출기간 및 연장</th>
+                                    <td>기본 14일, 1회 7회 연장가능
+                                        <p>연장하지 않을시 자동 반납되며 예약된 전자책은 연장 불가</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>예약 가능 권수</th>
+                                    <td>2권</td>
+                                </tr>
+                                <tr>
+                                    <th>예약 우선 기간</th>
+                                    <td>1일
+                                        <p>대출 가능 권수를 초과해, 예약한 도서의 자동 대출이 불가 할때 다른 도서를 반납하고 수동으로 예약 도서를 대출 할수 있도록 주어지는 기간</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 최근 대출/반납자료/공지사항 영역 종료-->
+
+
+                <!-- 최근 대출/반납 맞춤도서 영역-->
+                <div class="bookData">
+                    <!-- 최근 대출/반납 자료 영역  -->
+                    <div class="recentData">
+                        <ul>
+                            <li id="tab1" class="btnCon">
+                                <input type="radio" checked name="tabmenu" id="tabmenu1">
+                                <label for="tabmenu1"><span>최근대출자료</span></label>
+                                <div class="tabCon">
+                                    <img src="images/books.png" alt="bestBook">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">제목</th>
+                                                <th>대출일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="images/ebook.png" alt="전자책"></td>
+                                                <td><a href="#" title=""><span>더 해빙(The Having)</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/ebook.png" alt="전자책"></td>
+                                                <td><a href="#" title=""><span> 돈의 흐름으로 보는 세계사</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/ebook.png" alt="전자책"></td>
+                                                <td><a href="#" title=""><span>다시, 책으로</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/ebook.png" alt="전자책"></td>
+                                                <td><a href="#" title="">류</a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li id="tab2" class="btnCon">
+                                <input type="radio" name="tabmenu" id="tabmenu2">
+                                <label for="tabmenu2"><span>최근반납자료</span></label>
+                                <div class="tabCon">
+                                    <img src="images/return.png" alt="bestBook">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">제목</th>
+                                                <th>반납일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="images/ebook.png" alt="전자책"></td>
+                                                <td><a href="#" title=""><span>낯선 자의 일기</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/ebook.png" alt="전자책"></td>
+                                                <td><a href="#" title=""><span>서울 자가에 대기업 다니는 김 부장 이야기. 2: 정 대리 권 사원 편</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/audiobook.png" alt="오디오북"></td>
+                                                <td><a href="#" title=""><span>홉스의 리바이어던</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/audiobook.png" alt="오디오북"></td>
+                                                <td><a href="#" title=""><span>홉스의 리바이어던</span></a></td>
+                                                <td><time datetime=2023-03-07>2023.03.07</time></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 최근 대출/반납 자료 종료  -->
+
+                    <!-- 맞춤 도서 영역 -->
+                    <div class="match">
+                        <div class="matchTitle">
+                            <h3>나만의 맞춤도서</h3>
+                            <p>로그인이 필요합니다</p>
+                            <a href="#" class="more" title="나만의맞춤도서 더보기"> 더보기</a>
+                        </div>
+                        <div class="matchImg">
+                            <div class="bigImg">
+                                <a href="#" title="맛있는디자인라이트룸CC"><img src="images/match/0.jpg" alt="맛있는디자인라이트룸CC이미지"></a>
+                            </div>
+                            <div class="inforSmallImg">
+                                <div class="bookInfo">
+                                    <dl>
+                                        <dt><a href="#" title="맛있는 디자인 라이트룸">맛있는 디자인 라이트룸 CC(기본편+활용편)</a></dt>
+                                        <dd>김주원 지음<span>한빛미디어</span></dd>
+                                        <dd><span>라이트룸을 제대로 배우는 가장 완벽한 레시피!<br>
+                                            한 권으로 사진 보정 기초부터 활용까지! 쉽고 빠르게 익혀 바로 쓰는 사진 보정 입문서!</span></dd>
+                                    </dl>
+                                </div>
+                                <div class="smallImg">
+                                    <img src="images/match/0.jpg" alt="맛있는 디자인 라이트룸 CC(기본편+활용편)">
+                                    <img src="images/match/1.jpg" alt="비전공이지만 개발자로 먹고삽니다">
+                                    <img src="images/match/2.jpg" alt="웹소설써서 먹고삽니다">
+                                    <img src="images/match/3.jpg" alt="머신러닝 데이터 전처리 입문">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 최근 대출/반납자료/공지사항 영역 종료-->
+            </div>
+            <!-- top button -->
+            <a href="#header" class="topBtn" title="최상위로">TOP</a>
+        </div>
+        <!--main contents 영역 종료-->
+
+        <!-- footer 영역 시작-->
+        <footer id="footer">
+            <div class="footerInner">
+                <div class="footerLeft">
+                    <a href="index.html" title="고양시 전차책도서관 바로가기" target="_self">
+                        <img src="images/logo_foot.png" alt="footer logo">
+                    </a>
+                    <address>
+                    도서관명 : 고양시 전자책도서관 | 주소 : 고양시 덕양구 은빛로77번길 8(화정동,화정도서관)<br>
+                    대표전화 : 031-8075-9215 | 팩스 : -<br>
+                    Copyright ⓒ 고양시도서관센터. 대표전화 : 031-8075-9215. All rights reserved.<br>
+                    </address>
+                </div>
+
+                <div class="footerRight">
+                    <div class="familySite">
+                        <button class="btnFamily">
+                            <span class="btnText">Family Site</span>
+                            <!--<span class="arrow">g</span>-->
+                            <span class="arrow"><i class="fa-solid fa-chevron-up"></i></span>
+                        </button>
+                        <div class="familyUl">
+                            <ul>
+                                <li><a href="https://www.goyanglib.or.kr/">고양시도서관센터</a></li>
+                                <li><a href="https://www.library.kr/cyber/index.do">경기도사이버도서관</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footerSns">
+                        <a class="postLink" href="https://post.naver.com/goyang_library" title="네이버포스트바로가기" target="_blank">
+                            <span class="hidden">네이버포스트</span>
+                        </a>
+                        <a class="instagramLink" href="https://www.instagram.com/goyang_library/" title="인스타그램바로가기" target="_blank">
+                            <span class="hidden">인스타그램</span>
+                        </a>
+                        <a class="facebookLink" href="https://www.facebook.com/goyanglib.or.kr" title="페이스북바로가기" target="_blank">
+                            <span class="hidden"></span>
+                        </a>
+                        <a class="blogLink" href="https://blog.naver.com/goyang_lib" title="네이버블로그배로가바" target="_blank">
+                            <span class="hidden">네이버블로그</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer 영역 종료 -->
+    </div>
+
+    <script src="https://kit.fontawesome.com/3d4603cd1d.js" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

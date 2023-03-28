@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+
+
+/* 메인컨텐츠 영역*/
+/*.arrow1 {
+    display: inline-block;
+
+    border: 10px solid #2EC263;
+}*/
+
+.joinStep {
+    height: 40px;
+    font-size: 1.1em;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+.joinStep div {
+    margin: 0;
+}
+
+.joinStep .currentStep, .joinStep .step {
+    margin-top: 0;
+    display: inline-block;
+    width: 356px;
+    height: 40px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.joinStep p {
+    margin: 0 0;
+}
+.currentStep {
+    background-color: #e9f7e1;
+    font-weight: bold;
+}
+
+.btnArea {
+    text-align: center;
+    height: 50px;
+}
+.btnArea .btnStyle {
+    display: inline-block;
+    padding: 15px 30px;
+    background:linear-gradient(to bottom,#91D968  0%,#8bcb65 50%, #89d25e 100%);
+    color:#fff;
+    font-weight: bold;
+    border-radius: 5px;
+}

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 왼쪽 메뉴 영역*/
+
+/* 메인컨텐츠 영역*/
+
+/*상단 베스트북 outer*/
+.bestBookOuter {
+    background-color: #efefef;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/*상단 베스트북 2개 디스플레이 되는 부분inner*/
+.bestBookInner ul {
+    display: inline-block;
+    width: 676px;
+    overflow: hidden;
+}
+
+/* 베스트 북 각 영역 설정*/
+.bestBookInner ul li {
+    display: inline-block;
+    float: left;
+    width: 338px;
+    height: 140px;
+}
+
+/* 책 설명 영역*/
+/* 책 표지 이미지는 ebookCommon.css에서 설정함*/
+.bestBookInner ul li dl {
+    display: inline-block;
+    width: 218px;
+    margin: 0 10px;
+    height: 140px;
+    line-height: 1.1em;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.bestBookInner ul li dl dt  {
+    margin: 10px 0;
+}
+/* 지원하는 디바이스/플랫폼 아이콘 부분*/
+.bestBookInner ul li dl dt .icon{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* 책 제목, 링크 */
+.bestBookInner ul li dl dt a p {
+    font-weight: bold;
+}
+/* 책 저자 출판사 출간일 */
+.bestBookInner ul li dl dd em {
+    font-style:normal;
+    font-size: 13px;
+}
+/*  책 설명 영역*/
+.bestBookInner ul li dl dd p {
+    display: -webkit-box;
+    width: 220px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-indent: 5px;
+    font-size: 13px;
+    margin-top: 10px;
+}

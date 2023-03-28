@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/* 왼쪽 메뉴 영역*/
+
+/* 메인컨텐츠 공통사용 내용*/
+/* 책 표지, 그림자 설정*/
+.pic {
+    display: inline-block;
+    position: relative;
+    float: left;
+    height: 140px;
+}
+
+.pic img {
+    width: 100px;
+    height: 140px;
+}
+.pic .fold{
+    position: absolute;
+    left: 0;
+    height: 140px;
+    background-image: url('../images/bg_fold.png');
+    background-repeat: repeat-y;
+}
+
+
+/* 책 리스트 전체 감싸는 div*/
+#bookListWrap {
+    margin-bottom: 10px;
+}
+
+/* 전체도서보기 대출가능도서보기 설정 영역*/
+#bookListWrap .filterRadio {
+    margin-bottom: 10px;
+}
+/* 라디오 버튼 중앙정렬*/
+.filterRadio input {
+    display: table-cell;
+    vertical-align: middle
+}
+
+
+/* 탭메뉴 영역 */
+/* 탭메뉴 가로로 두기 위해 flex로 설정*/
+#bookListWrap > ul {
+    position: relative;
+    display: flex;
+    width: 716px; /*3월 15일에 724에서 716으로 크기 줄임*/
+}
+
+/* ul의 li , 탭메뉴 들 설정*/
+#bookListWrap ul .btnCon {
+    display: inline-block; /*3월 15일 추가*/
+    margin: 0px;
+    padding: 0;
+}
+
+/* 라디오 버튼 숨기기 */
+#bookListWrap ul .btnCon>input {
+    display: none;
+}
+
+/* 탭메뉴/라디오버튼의 각메뉴인 label 설정 */
+#bookListWrap ul .btnCon>label {
+    display: inline-block;
+    padding: 10px;
+    width: 238px; /*tab 개수가 다르면 common말고 각자css에서 설정*/
+    text-align: center;
+    color: #ccc;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/*선택된 라디오 버튼 꾸미기 */
+#bookListWrap ul .btnCon input:checked ~ label{
+    display:inline-block;
+    font-weight: bolder;
+    color: #000;
+    border-left: 2px solid #8bcb65;
+    border-top: 2px solid #8bcb65;
+    border-right: 2px solid #8bcb65;
+    border-radius: 5px 5px 0 0;
+}
+/*선택되지 않은 라디오 버튼 꾸미기 */
+#bookListWrap ul .btnCon input:not(:checked) ~ label{
+    border-bottom: 2px solid #8bcb65;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+}
+
+/* 책 리스트 영역*/
+.listOuter{
+    padding: 15px 20px;
+    margin-top: 10px;
+}
+
+/*실제 컨텐츠 나오는 영역 시작 */
+.listOuter .listInner {
+    margin-top: 10px;
+
+}
+
+.listOuter .listInner>ul>li{
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 20px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+.listInner ul li dl {
+    display: inline-block;
+    width: 400px;
+    /*margin: 0 10px;*/
+    margin:  0 15px;
+    height: 140px;
+    line-height: 1.3em;
+    color: #333;
+}
+.listInner ul li dl .icon {
+    display: inline-block;
+}
+
+.listInner ul li dl .icon img {
+    margin-right: 2px;
+}
+.listInner ul li dl dt p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+.listInner ul li dl dd {
+    font-size: 0.95em;
+}
+.listInner ul li dl dd em {
+    font-style: normal;
+}
+.listInner ul li dl dd p {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    -webkit-line-clamp: 2 ;
+    -webkit-box-orient: vertical;
+    text-indent: 5px;
+    margin-top: 10px;
+}
+
+/*대출예약현황및버튼*/
+.listInner .service {
+    display: inline-block;
+    width: 95px;
+    margin: 0 auto;
+    position: absolute;
+    top: 40px;
+
+}
+.service ul li {
+    font-size: 0.85em;
+    margin-bottom:  10px;
+}
+
+.service ul li span {
+    display: inline-block;
+    margin-left: 5px;
+}
+.service ul li strong {
+    margin-right: 3px;
+}
+.service ul li>span{
+    text-align: right;
+}
+.service ul li span strong {
+    color: #0865DB;
+}
+
+/*버튼 공통 속성*/
+.service .btnBR {
+
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.service .btnBR a {
+    padding: 20px 20px;
+    display: inline-block;
+
+}
+/*버튼 안 글씨 모양*/
+.service em {
+    display: inline-block;
+    color: #fff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 100%;
+    height: 100%;
+}
+
+/*버튼 예약 상태*/
+.service .btnR {
+    background: linear-gradient(#3081F2 0%,#0865DB 100% );
+    
+}
+.service .btnR:hover {
+    background: linear-gradient(#0865DB 0%,#3081F2 100% );
+    
+}
+/*버튼 대출가능상태*/
+.service .btnB {
+    background: linear-gradient(#9DE395 0%, #8bcb65 30%,#8bcb65 70%, #9DE395 100%);
+}
+
+.service .btnB:hover {
+    background: linear-gradient(#8bcb65 0%, #9DE395 100%);
+}
+
+/*페이징 영역*/
+.pasing {
+    padding: 5px 10px 10px 10px;
+    text-align: center;
+}
+.pasing span {
+    margin: 10px;
+    cursor: pointer;
+}
+
+

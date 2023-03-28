@@ -1,0 +1,489 @@
+@charset "utf-8";
+
+/* 초기화 */
+html, body, div, header, nav, section, footer,
+figure, figcaption, legend, fieldset,ul, li, ol, dt, dd,
+h1, h2,h3, h4,p, span,table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+fieldset {
+    border: 0;
+}
+legend {
+    display: none;
+}
+
+/* 숨김 컨텐츠 */
+.hidden {
+    position: absolute;
+    left: -9999px;
+}
+#skipNav {
+    position: absolute;
+    left: -9999px;
+}
+
+#skipNav:focus {
+    left:0;
+    padding:5px 15px;
+    background-color: #000;
+    color: #fff;
+    z-index: 100;
+}
+
+/* 기본 스타일 */
+
+/* 기본 스타일 - font-face */
+@font-face {
+    font-family: "SansLight";
+    font-weight: 300;
+    src: url('font/gSans/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+    url('font/gSans/GmarketSansLight.woff2') format('woff2'),
+    url('font/gSans/GmarketSansLight.woff') format('woff'),
+    url('font/gSans/GmarketSansLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SansMedium";
+    font-weight: 500;
+    src: url('font/gSans/GmarketSansMedium.eot#iefix') format('embedded-opentype'),
+    url('font/gSans/GmarketSansMedium.woff2') format('woff2'),
+    url('font/gSans/GmarketSansMedium.woff') format('woff'),
+    url('font/gSans/GmarketSansMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SansBold";
+    font-weight: 700;
+    src: url('font/gSans/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+    url('font/gSans/GmarketSansBold.woff2') format('woff2'),
+    url('font/gSans/GmarketSansBold.woff') format('woff'),
+    url('font/gSans/GmarketSansBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "NeoLight";
+    font-weight: 300;
+    src: url('font/Neo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+         url('font/Neo/NanumSquareNeo-aLt.woff2')  format('woff2'),
+         url('font/Neo/NanumSquareNeo-aLt.woff')  format('woff'),
+         url('font/Neo/NanumSquareNeo-aLt.ttf')  format("truetype");
+}
+@font-face {
+    font-family: "NeoRegular";
+    font-weight: 400;
+    src: url('font/Neo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+         url('font/Neo/NanumSquareNeo-bRg.woff2')  format('woff2'),
+         url('font/Neo/NanumSquareNeo-bRg.woff')  format('woff'),
+         url('font/Neo/NanumSquareNeo-bRg.ttf')  format("truetype");
+}
+@font-face {
+    font-family: "NeoBold";
+    font-weight: 700;
+    src: url('font/Neo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+         url('font/Neo/NanumSquareNeo-cBd.woff2')  format('woff2'),
+         url('font/Neo/NanumSquareNeo-cBd.woff')  format('woff'),
+         url('font/Neo/NanumSquareNeo-cBd.ttf')  format("truetype");
+}
+@font-face {
+    font-family: "NeoExBold";
+    font-weight: 800;
+    src: url('font/Neo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+         url('font/Neo/NanumSquareNeo-dEb.woff2')  format('woff2'),
+         url('font/Neo/NanumSquareNeo-dEb.woff')  format('woff'),
+         url('font/Neo/NanumSquareNeo-dEb.ttf')  format("truetype");
+}
+@font-face {
+    font-family: "NeoExHeavy";
+    font-weight: 900;
+    src: url('font/Neo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+         url('font/Neo/NanumSquareNeo-eHv.woff2')  format('woff2'),
+         url('font/Neo/NanumSquareNeo-eHv.woff')  format('woff'),
+         url('font/Neo/NanumSquareNeo-eHv.ttf')  format("truetype");
+}
+@font-face {
+    font-family: "webcafeIcon";
+    font-weight: 400;
+    src: url("font/webcafeIcon/webcafeIcon.eot?#iefix") format("embedd-opentype"),
+    url("font/webcafeIcon/webcafeIcon.woff") format("woff"),
+    url("font/webcafeIcon/webcafeIcon.ttf") format("truetype"),
+    url("font/webcafeIcon/webcafeIcon.svg#webcaferegular") format("svg");
+}
+
+/* 기본 스타일 - 링크 태그 */
+a:link {
+    color: #222;
+    text-decoration: none;
+}
+a:visited {
+    color: #222;
+}
+/*
+a:focus {
+    box-sizing: border-box;
+    border: 2px solid #222;
+}*/
+
+
+
+/* 기본 스타일 - body */
+body {
+    font-family: "NeoRegular";
+    background-color: #fff;
+}
+/* 전체적인 레이아웃 설계 */
+#header, #footer,.mainImage, #mainContentsWrap {
+    width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* 헤더 영역 시작 */
+#header {
+    position: relative;
+    z-index: 10;
+}
+.topMenuArea {
+    height: 45px;
+}
+/* 상단 top menu 영역 */
+.topMenu {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    height: 35px;
+    margin: 0 auto;
+
+}
+.topMenu a {
+    font-size: 0.8em;
+    padding: 5px;
+}
+.topMenu li {
+    display: inline-block;
+}
+
+/* fixed 설정*/
+.menuWrap {
+    position: relative;
+    transition: top 300ms ease-in;
+    background-color: #fff;
+}
+.fixedActive{
+    position: fixed;
+    top:0;
+    width: 1024px;
+    box-sizing: border-box;
+    padding-top:10px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+/* 상단& 로고 검색창*/
+.logoAndSearch {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+.logoArea, .logo, .selectAndSearch, .selectArea, .searchArea {
+    display: inline-block;
+}
+
+.logoArea {
+    height: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.logo {
+
+    height: 70px;
+}
+.logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.selectAndSearch {
+    border: 2px solid #80BF5C ;
+    border-radius: 30px;
+    position: relative;
+    margin-left: 10px;
+    width: 500px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.selectArea select {
+    position: absolute;
+    border: none;
+    width: 80px;
+    height: 34px;
+    top: 2px;
+    left: 13px;
+    outline: none;
+}
+
+.searchArea input {
+    position: absolute;
+    top:2px;
+    left: 100px;
+    height: 32px;
+    width: 345px;
+    border: none;
+    outline: none;
+}
+
+.selectAndSearch .btnSearch {
+    position: absolute;
+    width: 20px;
+    right: 15px;
+    height: 34px;
+    margin-left: 10px;
+    line-height: 34px;
+    text-indent: 20px;
+    overflow: hidden;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+
+
+/*메인 메뉴 영역*/
+nav {
+    margin: 30px 0;
+}
+.mainMenu {
+    display: flex;
+    justify-content: center;
+}
+.mainMenu > li > a {
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-family: "NeoExBold";
+    font-size: 1.3em;
+    padding: 0 25px;
+    white-space: nowrap;
+}
+.mainMenu > li:hover > a, .mainMenu > li>a:focus{
+    border-bottom: 2px solid #80BF5C;
+}
+
+.mainMenu > li > ul {
+    position: absolute;
+    padding-top: 10px;
+    display: none;
+}
+.mainMenu>li>.subMenuWrap {
+    position: absolute;
+    left:0;
+    width: 100%;
+    padding: 20px 150px;
+    background-color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+    display:none;
+    text-align: center;
+}
+
+
+.mainMenu > li > .subNotice,
+.mainMenu > li > .subEbook {
+    text-align: justify;
+}
+
+.mainMenu > li > .subAudio {
+    text-align: center;
+}
+.mainMenu > li > .subInfo {
+    text-align: right;
+}
+
+.mainMenu .subMenuWrap .subMenu a {
+    display: inline-block;
+    padding: 10px;
+}
+.subMenu a:hover, .subMenu a:focus {
+    font-weight: bold;
+}
+
+
+
+
+
+/* 메인컨텐츠*/
+#mainContentsWrap{
+    width: 1024px;
+    /*height: 100%; 0315 8시 주석처리*/
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    overflow: hidden; /* 0315 8시 작성*/
+    box-sizing: border-box;
+
+}
+.addPaddingTop {
+    padding-top: 200px;
+}
+
+
+/* 컨텐츠 타이틀 더보기*/
+.contentTitleArea {
+    position: relative;
+}
+.more {
+    position: absolute;
+    font-size: 0.9em;
+    top:5px;
+    right: 15px;
+}
+.more::before {
+    position: absolute;
+    top: 3px;
+    right : 42px;
+    font-family: 'webcafeIcon';
+    font-size: 0.7em;
+    content: 'p';
+}
+
+/* top버튼 */
+.topBtn {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    margin: 0 auto;
+    padding:6px 3px 3px 3px;
+    width: 45px;
+    height: 45px;
+    border: 1.5px solid #aaa;
+    background-color: #fff;
+    color: #666 !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);;
+    box-sizing: border-box;
+}
+.topBtn::before {
+    display: inline-block;
+    font-family: 'webcafeIcon';
+    content: 'g';
+    transform: rotate(-90deg);
+}
+.topBtn.activeBtn{
+    display: inline-block;
+}
+
+
+
+
+/* footer 영역*/
+
+#footer {
+    margin-top: 10px;
+    border-top: 2px solid #89d25e;;
+    clear: both;
+    height: 160px;
+}
+.footerInner {
+    margin: 20px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.footerLeft {
+    float: left;
+    width: 555px;
+}
+.footerLeft img {
+    width: 200px;
+}
+
+.footerLeft address {
+    margin-top: 10px;
+    font-style: normal;
+    line-height: 20px;
+    font-size: 0.8em;
+}
+
+.footerRight {
+    float: right;
+    width: 420px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.familySite {
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+.familySite .btnFamily {
+
+    width: 180px;
+    padding: 10px 15px 10px;
+    text-align: left;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+}
+.btnFamily .arrow {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    color: #bbb;
+    font-size: 0.5em;
+}
+.familySite .familyUl {
+    display: none;
+}
+.familySite ul {
+    margin-top: 5px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+.familySite ul li {
+    margin: 5px 0;
+}
+.familySite ul li a{
+    display: inline-block;
+    width: 100%;
+}
+.familySite ul li:hover, .familySite ul li a:hover {
+    text-decoration: underline;
+}
+.footerSns {
+    float: right;
+}
+.footerSns a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.footerSns .postLink {
+    background: url('../images/footerIMG/postIcon.png') no-repeat 0 0;
+}
+.footerSns .instagramLink {
+    background: url('../images/footerIMG/instaIcon.png') no-repeat 0 0;
+}
+.footerSns .facebookLink {
+    background: url('../images/footerIMG/facebookIcon.png') no-repeat 0 0;
+}
+.footerSns .blogLink {
+    background: url('../images/footerIMG/blogIcon.png') no-repeat 0 0;
+}
