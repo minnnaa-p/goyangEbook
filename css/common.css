@@ -173,7 +173,7 @@ body {
 /* fixed 설정*/
 .menuWrap {
     position: relative;
-    transition: top 300ms ease-in;
+    transition: top 500ms ease-in;
     background-color: #fff;
 }
 .fixedActive{
@@ -332,10 +332,9 @@ nav {
     padding-bottom: 10px;
     overflow: hidden; /* 0315 8시 작성*/
     box-sizing: border-box;
-
 }
 .addPaddingTop {
-    padding-top: 200px;
+    padding-top: 300px;
 }
 
 
