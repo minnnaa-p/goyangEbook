@@ -260,6 +260,9 @@
 .notiInfoTable table th {
     background-color: #efefef;
 }
+.notice h3, .checkoutInfo h3 {
+    padding-left: 5px;
+}
 
 /* 공지사항 영역 */
 .notice {
