@@ -69,7 +69,7 @@
     display: inline-block;
     letter-spacing: 1px;
 }*/
-.leftInner ul>li:hover, .leftInner ul>li>a:focus {
+.leftInner ul>li:hover{
     background-color:#e9f7e1;
 } 
 
