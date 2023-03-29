@@ -23,7 +23,6 @@ $(window).scroll(function () {
 
     if(scrollValue>400) {
         $('.bookInfoMenu').addClass('menuActive');
-        $('.addPadingTop').css('padding-top',250);
     } else {
         $('.bookInfoMenu').removeClass('menuActive');
 
