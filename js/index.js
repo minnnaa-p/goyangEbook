@@ -324,7 +324,7 @@ let matchBook=[
     mainImageAnimation();
     setInterval(function(){
         mainImageAnimation();   
-    },18000);
+    },31000);
 
 
 
@@ -400,6 +400,7 @@ let matchBook=[
         alert('로그인이 필요합니다');
     });
 
+    console.log(mainImgSpan.length);
 
     /* 함수 정의 영역*/ 
     //메인이미지 글씨 애니메이션
@@ -409,12 +410,12 @@ let matchBook=[
                 $(mainImgSpan[i]).delay(i*150).animate({
                     opacity:1
                 },);
-            }
-        },2000);
+            } //3300
+        },3000); //5300
     
         $('.mainImageTxt2').delay(500);
         $('.mainImageTxt2').fadeIn(3000);
-        $('.mainImageTxt1').fadeIn(3000);
+        $('.mainImageTxt1').fadeIn(3000); //6500
 
         //다시 지워주는 setinterval
         setTimeout(function(){
@@ -422,7 +423,7 @@ let matchBook=[
             $('.mainImageTxt2').delay(500).fadeOut(1000);
             $('.mainImage p span').delay(1500).animate({
                 opacity:0
-            });
+            }); //4000
         },15000);
     }
     
