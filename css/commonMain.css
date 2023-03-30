@@ -9,7 +9,7 @@
 .leftMenu {
     float: left; /* 0315 8시 작성*/
     display: inline-block;
-    width: 280px;
+    width: 260px;
     /*float: left;*/
 }
 .leftInner {
