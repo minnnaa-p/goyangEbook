@@ -64,7 +64,7 @@
 .bookOuter {
     position: relative;
     margin-top: 10px;
-    width: 1024px;
+    width: 1000px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -190,7 +190,7 @@
 /*배너 공지사항 이용안내 영역*/
 /*배너 공지사항 전체 영역 설정*/
 .noticeInfo {
-    width: 1024px;
+    width: 1000px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -328,14 +328,14 @@
 
 /* 최근 대출/반납자료/맞춤도서추천 영역*/
 .bookData {
-    width: 1024px;
+    width: 1000px;
     height: 220px;
     margin-bottom: 10px;
 }
 .bookData .recentData {
     float: left;
     position:relative;
-    width: 615px;
+    width: 580px;
     padding: 10px;
     height: 220px;
     box-sizing: border-box;
@@ -376,7 +376,7 @@
 .btnCon .tabCon>img {
     display: inline-block;
     margin: 0 10px;
-    width: 120px;
+    width: 100px;
 }
 .recentData input:checked ~ label{
     display:inline-block;
@@ -395,7 +395,7 @@
 }
 .tabCon table {
     display: inline-block;
-    width: 440px;
+    width: 400px;
     text-align: left;
     font-size: 0.85em;
     color: #333;
