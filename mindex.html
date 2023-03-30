@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양시 전자책 도서관 모바일</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #fff;
+        }
+        a {
+            text-decoration: none;
+        }
+        nav a:link, a:visited {
+            color: #fff;
+        }
+        nav a:active {
+            color: #80BF5C;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: 1.2em;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 2.5;
+        }
+        li {
+            font-size: 1em;
+        }
+        #container {
+            width: 100%;
+        }
+        header {
+            width: 100%;
+            height: 300px;
+            background: url(images/mainImage.jpg)no-repeat center;
+            background-size: cover;
+        }
+        nav {
+            height: 50px;
+            background-color: #000;
+        }
+        #main_nav {
+            list-style: none;
+            padding: 10px;
+        }
+        #main_nav li {
+            display: inline-block;
+            color: #fff;
+            font-size: 0.8em;
+            margin: 5px 15px;
+        }
+        .photo {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        .photo img {
+            width: 100%;
+        }
+        footer {
+            background-color: #000;
+        }
+        footer p {
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul id="main_nav">
+                    <li><a href="#libInfo">도서관소식</a></li>
+                    <li><a href="#ebook">전자책</a></li>
+                    <li><a href="#audiobook">오디오북</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="libInfo">
+            <div class="page_title">
+                <h1>도서관 소식</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/banner/banner1.png" alt="banner01">
+                </div>
+                <div class="text">
+                    <p>전자책 대출기간 변경 안내</p>
+                    <p>3월 2일부터 전자책 대출 기간이 14일로 연장됩니다.<br>
+                        - 대상 : 전자책, 오디오북<br>
+                        - 대출기간 : 14일(전자책만 1회 7일 연장 가능)<br>
+                        - 시행 : 2023. 3. 2.(목) 09:00부터<br>
+                        <i><small>※ 3월 2일 이전에 대출한 책은 기존과 동일</small></i><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="ebook">
+            <div class="page_title">
+                <h1>전자책</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/best/0.jpg" alt="불편한편의점표지">
+                </div>
+                <div class="text">
+                    <h2>베스트 자료</h2>
+                    <p>불편한 편의점</p>
+                    <p>김호연</p>
+                </div>
+            </div>
+        </section>
+        <section id="audiobook">
+            <div class="page_title">
+                <h1>오디오북</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/new/0.jpg" alt="세상에서가장강력한백신은사람입니다.">
+                </div>
+                <div class="text">
+                    <h2>신착자료</h2>
+                    <p>세상에서 가장 강력한 백신은 사람입니다</p>
+                    <p>김봉재</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>
+                Copyright ⓒ 고양시도서관센터. 대표전화 : 031-8075-9215. All rights reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
