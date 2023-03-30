@@ -322,10 +322,10 @@ let matchBook=[
 
     //메인 이미지 애니메이션
     mainImageAnimation();
-    setInterval(function(){
+    /*setInterval(function(){
         mainImageAnimation();   
-    },31000);
-
+    },25000);
+    */
 
 
 
@@ -355,14 +355,13 @@ let matchBook=[
     $('.banner_slide_panel').append($('.banner_img').first().clone());
     $('.banner_slide_panel').prepend($('.banner_img').eq(-2).clone());
     $('.banner_slide_panel').css('left',-300);
-
     bannerMoveSlide(bannerIdx);
+
     autoSlider();
     $('.control_btn').click(function(){
         bannerIdx=$(this).index();
         bannerMoveSlide(bannerIdx+1);
     });
-
     $('.imgBanner').hover(function(){
         clearInterval(auto); 
     },function(){
@@ -405,26 +404,38 @@ let matchBook=[
     /* 함수 정의 영역*/ 
     //메인이미지 글씨 애니메이션
     function mainImageAnimation(){
-        setTimeout(function(){
-            for(let i=0; i<mainImgSpan.length; i++) {
-                $(mainImgSpan[i]).delay(i*150).animate({
-                    opacity:1
-                },);
-            } //3300
-        },3000); //5300
+        //setTimeout(function(){
+        //    for(let i=0; i<mainImgSpan.length; i++) {
+        //        $(mainImgSpan[i]).delay(i*150).animate({
+        //            opacity:1
+        //        },);
+        //    } //3300
+        //},3000); //5300
     
-        $('.mainImageTxt2').delay(500);
-        $('.mainImageTxt2').fadeIn(3000);
-        $('.mainImageTxt1').fadeIn(3000); //6500
+        //$('.mainImageTxt2').delay(500);
+        //$('.mainImageTxt2').fadeIn(3000);
+        $('.mainImageTxt1').fadeIn(3000,function(){
+            $('.mainImageTxt2').fadeIn(3000,function(){
+                for(let i=0; i<mainImgSpan.length; i++){
+                    $(mainImgSpan[i]).delay(i*150).animate({
+                        opacity:1
+                    });
+                }
+            });
+        }); //6500
 
         //다시 지워주는 setinterval
-        setTimeout(function(){
+        /*setTimeout(function(){
             $('.mainImageTxt1').fadeOut(1000);
-            $('.mainImageTxt2').delay(500).fadeOut(1000);
-            $('.mainImage p span').delay(1500).animate({
+            $('.mainImageTxt2').fadeOut(1000);
+            $('.mainImage p span').animate({
                 opacity:0
-            }); //4000
-        },15000);
+            },1000);
+        },20000);*/
+            //$('.mainImageTxt2').delay(500).fadeOut(1000);
+            //$('.mainImage p span').delay(1500).animate({
+            //    opacity:0
+            //}); //4000
     }
     
     
@@ -508,7 +519,7 @@ let matchBook=[
             $('.newBook').append(item);
         }
     }
-    // 랜덤 숫자 함수
+    // 신착도서 출력 랜덤으로 골라주는 함수
     function ranArr(num){  //num은 신착도서의 총 개수
         let arr=[];
         let ranNum;
