@@ -69,9 +69,7 @@
     z-index:2;
     border-bottom: 1px solid #8bcb65 ;
 }
-.addPaddingTop {
-    padding-top: 250px;
-}
+
 .bookInfoDetail .bookInfoMenu ul {
     margin: 15px auto;
     text-align: center;
@@ -153,18 +151,22 @@
 .service a{
     display: inline-block;
     padding: 15px 25px;
-    background-color:#4781E6;
+    background: linear-gradient(#3081F2 0%,#0865DB 100% );
     border-radius: 5px;
+}
+.service a:hover {
+    background: linear-gradient(#0865DB 0%,#3081F2 100% );
 }
 .service a em {
     color: #fff;
-
 }
 .bookInfoDetail {
     margin-top: 15px;
     /*border-top: 2px solid #8bcb65 ;*/
 }
-
+.addPaddingTop {
+    padding-top: 250px;
+}
 
 .bookInfoDetailInner {
     padding: 15px;
