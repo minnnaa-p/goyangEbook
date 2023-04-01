@@ -14,22 +14,21 @@ $(function(){
         check();
     });
 
-});
+    $('.chk').click(function(){
+        let total=$('input[name=agree]').length;
+        let checked=$('input[name=agree]:checked').length;
+        if(total!=checked) {
+            $('#agreeAll').prop('checked',false);
+            //a태그 비활성화 함수 호출
+            btnDisable();
+        } else {
+            $('#agreeAll').prop('checked',true);
+            //a태그 활성화 함수호출
+            btnAble();
+        }
+    });
 
-$('.chk').click(function(){
-    let total=$('input[name=agree]').length;
-    let checked=$('input[name=agree]:checked').length;
-    if(total!=checked) {
-        $('#agreeAll').prop('checked',false);
-        //a태그 비활성화 함수 호출
-        btnDisable();
-    } else {
-        $('#agreeAll').prop('checked',true);
-        //a태그 활성화 함수호출
-        btnAble();
-    }
 });
-
 
 function check(){         
     if($('#agreeAll').is(':checked')) {
