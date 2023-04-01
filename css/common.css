@@ -223,17 +223,17 @@ body {
     box-sizing: border-box;
 }
 
-.selectArea select {
+.selectArea #cate {
     position: absolute;
     border: none;
     width: 80px;
-    height: 34px;
+    height: 32px;
     top: 2px;
     left: 13px;
     outline: none;
 }
 
-.searchArea input {
+.searchArea #search {
     position: absolute;
     top:2px;
     left: 100px;
@@ -259,7 +259,6 @@ body {
 }
 
 
-
 /*메인 메뉴 영역*/
 nav {
     margin: 30px 0;
@@ -279,7 +278,7 @@ nav {
     padding: 0 25px;
     white-space: nowrap;
 }
-.mainMenu > li:hover > a, .mainMenu > li>a:focus{
+.mainMenu > li:hover > a{
     border-bottom: 2px solid #80BF5C;
 }
 
@@ -333,13 +332,14 @@ nav {
     overflow: hidden; /* 0315 8시 작성*/
     box-sizing: border-box;
 }
+.mainContents {
+    padding: 0 10px;
+}
+
 .addPaddingTop {
     padding-top: 200px;
 }
 
-.mainContents {
-    padding: 0 10px;
-}
 
 /* 컨텐츠 타이틀 더보기*/
 .contentTitleArea {
@@ -397,7 +397,7 @@ nav {
 
 #footer {
     margin-top: 10px;
-    border-top: 2px solid #89d25e;;
+    border-top: 2px solid #89d25e;
     clear: both;
     height: 160px;
 }
