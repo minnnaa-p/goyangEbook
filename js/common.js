@@ -20,10 +20,10 @@ $(function(){
         let scrollY=$(document).scrollTop();
         if(scrollY>menuWrap.top){
             $('.menuWrap').addClass('fixedActive');
-            $('.mainConetns').addClass('addPaddingTop');
+            $('.mainContents').addClass('addPaddingTop');
         } else {
             $('.menuWrap').removeClass('fixedActive');
-            $('.mainConetns').removeClass('addPaddingTop');
+            $('.mainContents').removeClass('addPaddingTop');
         }
     });
 
