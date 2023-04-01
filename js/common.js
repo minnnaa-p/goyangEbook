@@ -16,8 +16,10 @@ $(function(){
     });
     */
     let menuWrap=$('.menuWrap').offset();
+    let scrollY
     $(window).scroll(function(){
-        let scrollY=$(document).scrollTop();
+        scrollY=$(document).scrollTop();
+
         if(scrollY>menuWrap.top){
             $('.menuWrap').addClass('fixedActive');
             $('.mainContents').addClass('addPaddingTop');
@@ -25,6 +27,7 @@ $(function(){
             $('.menuWrap').removeClass('fixedActive');
             $('.mainContents').removeClass('addPaddingTop');
         }
+        viewTopbtn();
     });
 
 
